@@ -50,8 +50,8 @@ Each time you create an app
 - > npm install create-react-app
 - > create-react-app your-app-pretty-cool-name
 - > cd your-app-pretty-cool-name
-- > npm install --save styled-components recompose react-redux flow-bin redux redux-immutable redux-logger reselect axios axios-mock-adapter immutable lodash enzyme jest-immutable-matchers jest-serializer-enzyme react-styleguidist react-test-renderer redux-test-utils
-- > flow-typed install enzyme@3.0.0 jest@20.0.0 lodash@4.0.0 recompose@0.24.0
+- > npm install --save styled-components recompose react-redux flow-bin redux redux-immutable redux-logger reselect axios axios-mock-adapter immutable lodash enzyme jest-immutable-matchers enzyme-adapter-react-16 enzyme-to-json react-styleguidist react-test-renderer redux-test-utils
+- > flow-typed install enzyme@3.0.0 jest@20.0.0 lodash@4.0.0 recompose@0.24.0 styled-components@2.2.3 reselect@3.0.1 axios@0.17.1
 - Configure your 'package.json' file (https://github.com/react-genova/workshops/blob/master/01/resources/pacakge.json.addons)
 - Add linter config file '.eslintrc' (https://github.com/react-genova/workshops/blob/master/01/resources/.eslintrc)
 - Add flow config file '.flowconfig' (https://github.com/react-genova/workshops/blob/master/01/resources/.flowconfig)

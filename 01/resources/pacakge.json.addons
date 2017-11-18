@@ -2,7 +2,7 @@
   ...
   "jest": {
     "snapshotSerializers": [
-      "./node_modules/jest-serializer-enzyme"
+      "enzyme-to-json/serializer"
     ]
   },
   "scripts": {

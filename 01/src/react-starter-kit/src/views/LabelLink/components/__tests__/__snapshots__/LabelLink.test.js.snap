@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LabelLink component simple label snapshot 1`] = `
+<styled.div>
+  <styled.div
+    onClick={[Function]}
+    title="http://www.google.it/"
+  >
+    Google
+  </styled.div>
+  <styled.div>
+    One of the best search engine
+  </styled.div>
+</styled.div>
+`;
