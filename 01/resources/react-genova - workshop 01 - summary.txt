@@ -1,7 +1,7 @@
 ------------------------------------------------------------------
  SLIDE 01: All you need is L.O.V.S - List Of Valuable Suggestions
 ------------------------------------------------------------------
-Developer tools: setting you up
+Developer tools (setting you up, boring part)
 - Node.js (https://nodejs.org/it/)
 - Visual Studio Code (https://code.visualstudio.com/)
 	- Babel ES6/ES7
@@ -10,34 +10,34 @@ Developer tools: setting you up
 	- Path Intellisense
 	- Relative Path
 
-React (view)
+React (here is the big guy)
 - create-react-app (https://github.com/facebookincubator/create-react-app)
 - recompose (https://github.com/acdlite/recompose)
 - styled-components (https://www.styled-components.com/)
 
-Redux (business logic)
+Redux (Dan Abramov AKA gaeron AKA the genius)
 - redux (https://redux.js.org/)
 - react-redux (https://github.com/reactjs/react-redux)
 - reselect (https://github.com/reactjs/reselect)
-- redux-logger (https://github.com/evgenyrodionov/redux-logger)
 - redux-immutable (https://github.com/gajus/redux-immutable)
 
-Testing (yes, we test)
+Testing (the better you test, the longer you rest)
 - jest (https://facebook.github.io/jest/)
 - react-styleguidist (https://react-styleguidist.js.org/)
 - enzyme (https://github.com/airbnb/enzyme)
 
-Libraries (usefull stuff)
-- immutable (https://facebook.github.io/immutable-js/)
+Libraries (and yes, there's no jQuery)
 - axios (https://github.com/axios/axios)
 - lodash (https://lodash.com/)
+- immutable (https://facebook.github.io/immutable-js/)
 
-In-depth technological study
-- project folder structure
-- middleware in redux
-- avoiding side effects
-- npm and package.json
-- Functional Reactive Programming
+In-depth technological study (not enough? some more stuff)
+- project folder structure (really, are you serious?)
+- middleware in redux (the redux source of power)
+- Higher Order Components (how inheritance works in math)
+- avoiding side effects (redux-saga, redux-effects, redux-cycles)
+- npm and package.json (I am root)
+- Functional Reactive Programming (FRP or F&RP, the long fight)
 
 ---------------------------------------------------------
  SLIDE 02: Conclusions - Yeah, interesting, so in short?
