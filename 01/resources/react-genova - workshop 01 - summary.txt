@@ -1,0 +1,54 @@
+------------------------------------------------------------------
+ SLIDE 01: All you need is L.O.V.S - List Of Valuable Suggestions
+------------------------------------------------------------------
+Developer tools: setting you up
+- Node.js (https://nodejs.org/it/)
+- Visual Studio Code (https://code.visualstudio.com/)
+	- Babel ES6/ES7
+	- ESLint
+	- Flow Language Support
+	- Path Intellisense
+	- Relative Path
+
+React (view)
+- create-react-app (https://github.com/facebookincubator/create-react-app)
+- recompose (https://github.com/acdlite/recompose)
+- styled-components (https://www.styled-components.com/)
+
+Redux (business logic)
+- redux (https://redux.js.org/)
+- react-redux (https://github.com/reactjs/react-redux)
+- reselect (https://github.com/reactjs/reselect)
+- redux-logger (https://github.com/evgenyrodionov/redux-logger)
+- redux-immutable (https://github.com/gajus/redux-immutable)
+
+Testing (yes, we test)
+- jest (https://facebook.github.io/jest/)
+- react-styleguidist (https://react-styleguidist.js.org/)
+- enzyme (https://github.com/airbnb/enzyme)
+
+Libraries (usefull stuff)
+- immutable (https://facebook.github.io/immutable-js/)
+- axios (https://github.com/axios/axios)
+- lodash (https://lodash.com/)
+
+In-depth technological study
+- project folder structure
+- middleware in redux
+- avoiding side effects
+- npm and package.json
+- Functional Reactive Programming
+
+---------------------------------------------------------
+ SLIDE 02: Conclusions - Yeah, interesting, so in short?
+--------------------------------------------------------- 
+Just the first time
+- Download and install Node.js
+- Download and install Visual Studio Code and its plugins
+- > npm install flow-bin flow-typed
+Each time you create an app
+- > npm install create-react-app
+- > create-react-app your-app-pretty-cool-name
+- > cd your-app-pretty-cool-name
+- > npm install --save styled-components recompose react-redux flow-bin redux redux-immutable redux-logger reselect axios axios-mock-adapter immutable lodash enzyme jest-immutable-matchers jest-serializer-enzyme react-styleguidist react-test-renderer redux-test-utils
+- Configure your package.json ()

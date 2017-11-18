@@ -1,0 +1,15 @@
+{
+  ...
+  "jest": {
+    "snapshotSerializers": [
+      "./node_modules/jest-serializer-enzyme"
+    ]
+  },
+  "scripts": {
+    ...
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build",
+    "flow": "flow"
+  }
+  ...
+}
