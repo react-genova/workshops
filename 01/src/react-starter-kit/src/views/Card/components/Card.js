@@ -16,7 +16,7 @@ const TitleContainer = styled.div`
 const Title = styled.div`
     font-size: 1.6em;
     font-weight: bold;
-    color: #000080;
+    color: #264d73;
 `;
 
 const SubTitle = styled.div`

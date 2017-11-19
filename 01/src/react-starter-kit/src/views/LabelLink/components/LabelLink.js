@@ -15,7 +15,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.a`
-    color: #000080;
+    color: #264d73;
     font-size: 1.4em;
 `;
 

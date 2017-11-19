@@ -8,7 +8,7 @@ const Container = styled.div`
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.8em;
-    background-color: #4286f4;
+    background-color: #264d73;
     color: white;
     padding: 0.3em;
 `;
