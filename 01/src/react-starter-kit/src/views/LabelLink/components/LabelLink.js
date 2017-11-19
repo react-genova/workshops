@@ -19,7 +19,8 @@ const Title = styled.div`
     color: black;
     font-size: 1.3em;
     font-weight: bold;
-    cursor: pointer;
+    cursor: ${props => props.underline ? 'pointer' : 'default'};
+    text-decoration: ${props => props.underline ? 'underline' : undefined};
 `;
 
 const Description = styled.div`
@@ -28,7 +29,7 @@ const Description = styled.div`
 
 const LabelLink = ({title, description, url, onClick}:Props) => (
     <Container>
-        <Title onClick={() => onClick(url)} title={url}>{title}</Title>
+        <Title onClick={() => onClick(url)} underline={url.length>0} title={url}>{title}</Title>
         <Description>{description}</Description>
     </Container>
 );

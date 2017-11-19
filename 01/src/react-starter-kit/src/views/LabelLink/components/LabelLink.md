@@ -1,7 +1,13 @@
 ### Simple label ###
 
 ```js
-<LabelLink title="Google" description="One of the best search engine" url="http://www.google.it/" onClick={()=>null}/>
+<LabelLink title="Google" description="One of the best search engine" url="https://www.google.it/" onClick={()=>null}/>
+```
+
+### Simple label with no url ###
+
+```js
+<LabelLink title="Google" description="No URL for one of the best search engine" url="" onClick={()=>null}/>
 ```
 
 ### On click behaviour ###
@@ -11,7 +17,7 @@ initialState = { clickedUrl: 'none' };
 function onClick(clickedUrl) {setState({clickedUrl})};
 <div>
 <div style={{display:'flex', justifyContent:'space-evenly'}}>
-    <LabelLink title="Google" description="One of the best search engine" url="http://www.google.it/" onClick={onClick}/>
+    <LabelLink title="Google" description="One of the best search engine" url="https://www.google.it/" onClick={onClick}/>
     <LabelLink title="Duck Duck Go" description="Another search engine" url="https://duckduckgo.com/" onClick={onClick}/>
 </div>
 <div style={{paddingTop:'1.4em', fontSize:'1.2em'}}>

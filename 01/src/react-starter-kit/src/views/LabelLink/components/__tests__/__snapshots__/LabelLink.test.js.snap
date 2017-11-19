@@ -5,6 +5,7 @@ exports[`LabelLink component simple label snapshot 1`] = `
   <styled.div
     onClick={[Function]}
     title="http://www.google.it/"
+    underline={true}
   >
     Google
   </styled.div>
