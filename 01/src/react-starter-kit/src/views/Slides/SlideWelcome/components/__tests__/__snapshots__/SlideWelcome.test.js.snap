@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slide Welcome snapshot check 1`] = `
+<styled.div>
+  <styled.div>
+    react-genova
+  </styled.div>
+  <styled.div>
+    workshop 01 - React Starter Kit
+  </styled.div>
+</styled.div>
+`;

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LabelTerminal component simple label snapshot 1`] = `
+<styled.div>
+  <styled.div>
+    &gt;
+  </styled.div>
+  <styled.div>
+    npm install --save redux
+  </styled.div>
+</styled.div>
+`;

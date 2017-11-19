@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Conclusions snapshot check 1`] = `
+<Card
+  description="All copy and no paste makes Jack a dull boy"
+  title="Step by step installation guide"
+>
+  <CardElement
+    description=""
+    onClick={[Function]}
+    title="Just the first time"
+    url=""
+  >
+    <CardElement
+      description=""
+      onClick={[Function]}
+      title="Download and install Node.js"
+      url=""
+    />
+    <CardElement
+      description=""
+      onClick={[Function]}
+      title="Download and install Visual Studio Code and its plugins"
+      url=""
+    />
+    <LabelTerminal
+      text="npm install flow-bin flow-typed"
+    />
+  </CardElement>
+  <CardElement
+    description=""
+    onClick={[Function]}
+    title="Each time you create an app"
+    url=""
+  >
+    <LabelTerminal
+      text="npm install create-react-app"
+    />
+    <LabelTerminal
+      text="create-react-app your-app-pretty-cool-name"
+    />
+    <LabelTerminal
+      text="cd your-app-pretty-cool-name"
+    />
+    <LabelTerminal
+      text="npm install --save styled-components recompose react-redux flow-bin redux redux-immutable redux-logger reselect axios axios-mock-adapter immutable lodash enzyme jest-immutable-matchers enzyme-adapter-react-16 enzyme-to-json react-styleguidist react-test-renderer redux-test-utils"
+    />
+    <LabelTerminal
+      text="flow-typed install enzyme@3.0.0 jest@20.0.0 lodash@4.0.0 recompose@0.24.0 styled-components@2.2.3 reselect@3.0.1 axios@0.17.1"
+    />
+    <CardElement
+      description=""
+      onClick={[Function]}
+      title="Configure your 'package.json' file"
+      url="https://github.com/react-genova/workshops/blob/master/01/resources/pacakge.json.addons"
+    />
+    <CardElement
+      description=""
+      onClick={[Function]}
+      title="Add linter config file '.eslintrc'"
+      url="https://github.com/react-genova/workshops/blob/master/01/resources/.eslintrc"
+    />
+    <CardElement
+      description=""
+      onClick={[Function]}
+      title="Add flow config file '.flowconfig'"
+      url="https://github.com/react-genova/workshops/blob/master/01/resources/.flowconfig"
+    />
+    <CardElement
+      description=""
+      onClick={[Function]}
+      title="Add styleguidist config file 'styleguide.config.js'"
+      url="https://github.com/react-genova/workshops/blob/master/01/resources/styleguide.config.js"
+    />
+    <CardElement
+      description=""
+      onClick={[Function]}
+      title="Add test config file 'setupTests.js'"
+      url="https://github.com/react-genova/workshops/blob/master/01/resources/setupTests.js"
+    />
+  </CardElement>
+</Card>
+`;

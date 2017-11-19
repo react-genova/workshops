@@ -13,7 +13,8 @@ module.exports = {
       components: ()=>[
         'src/views/Card/components/Card.js',
         'src/views/Card/components/CardElement.js',
-        'src/views/LabelLink/components/LabelLink.js'
+        'src/views/LabelLink/components/LabelLink.js',
+        'src/views/LabelTerminal/components/LabelTerminal.js',
       ]
     },
   ],

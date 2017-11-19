@@ -1,0 +1,3 @@
+```js
+<CardConclusions onClick={()=>null}/>
+```
