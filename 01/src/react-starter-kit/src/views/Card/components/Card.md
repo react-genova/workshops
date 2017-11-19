@@ -2,7 +2,7 @@
 
 ```js
 const onClick = ()=>null;
-<Card title="Most popular sites">
+<Card title="Most popular sites" description="It's so difficult to write a serious description?">
     <CardElement title="e-commerce" description="A bunch of sites" url="" onClick={onClick}>
         <CardElement title="Amazon" description="West Side Store" url="https://www.amazon.it/" onClick={onClick}/>
         <CardElement title="Alibaba" description="East but not least" url="https://www.alibaba.com/" onClick={onClick}/>

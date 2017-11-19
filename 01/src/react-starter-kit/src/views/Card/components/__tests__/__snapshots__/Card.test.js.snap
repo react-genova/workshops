@@ -4,7 +4,10 @@ exports[`Card component Card snapshot 1`] = `
 <styled.div>
   <styled.div>
     <styled.div>
-      I have 2 children
+      <styled.div>
+        I have 2 children
+      </styled.div>
+      <styled.div />
     </styled.div>
   </styled.div>
   <styled.div>

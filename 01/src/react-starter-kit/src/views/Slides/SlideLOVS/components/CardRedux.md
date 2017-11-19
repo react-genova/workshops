@@ -1,0 +1,3 @@
+```js
+<CardRedux onClick={()=>null}/>
+```

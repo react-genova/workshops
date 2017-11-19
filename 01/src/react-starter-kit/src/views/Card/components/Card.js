@@ -4,14 +4,23 @@ import styled from 'styled-components';
 
 const Container = styled.div`
     border-radius: 0.5em;
+    background-color: white;
     border: 0.035em solid #C8C8C8;
+    font-family: Arial, Helvetica, sans-serif;
+`;
+
+const TitleContainer = styled.div`
+    padding: 0.5em;
 `;
 
 const Title = styled.div`
-    padding: 0.5em;
     font-size: 1.4em;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+`;
+
+const SubTitle = styled.div`
+    font-size: 1.1em;
+    color: #808080;
 `;
 
 const Header = styled.div`
@@ -24,12 +33,16 @@ const Body = styled.div`
 
 type Props = {
     title:string,
+    description:string,
     children?:React.Node,
 };
-const Card = ({title, children}:Props) => (
+const Card = ({title, description, children}:Props) => (
     <Container>
         <Header>
-            <Title>{title}</Title>
+            <TitleContainer>
+                <Title>{title}</Title>
+                <SubTitle>{description}</SubTitle>
+            </TitleContainer>
         </Header>
         <Body>
             {children}

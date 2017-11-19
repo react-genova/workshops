@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Redux snapshot check 1`] = `
+<Card
+  description="Dan Abramov AKA gaeron AKA the genius"
+  title="Redux"
+>
+  <CardElement
+    description="the core of the business logic"
+    onClick={[Function]}
+    title="redux"
+    url="https://redux.js.org/"
+  />
+  <CardElement
+    description="link our two main actors"
+    onClick={[Function]}
+    title=" react-redux"
+    url="https://github.com/reactjs/react-redux"
+  />
+  <CardElement
+    description="cool selectors management"
+    onClick={[Function]}
+    title="reselect"
+    url="https://github.com/reactjs/reselect"
+  />
+  <CardElement
+    description="immutable in redux store"
+    onClick={[Function]}
+    title="redux-immutable"
+    url="https://github.com/gajus/redux-immutable"
+  />
+</Card>
+`;
