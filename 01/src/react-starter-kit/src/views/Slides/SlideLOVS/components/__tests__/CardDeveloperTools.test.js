@@ -6,8 +6,7 @@ import CardDeveloperTools from '../CardDeveloperTools';
 describe('Card Developer Tools', () => {
 
     it('snapshot check', () => {
-        const onClick = (url:string)=>{url.toLocaleLowerCase();};
-        const component = shallow(<CardDeveloperTools onClick={onClick} />);
+        const component = shallow(<CardDeveloperTools />);
         expect(component).toMatchSnapshot();
     });
 

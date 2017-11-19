@@ -3,34 +3,22 @@
 exports[`Slide LOVS snapshot check 1`] = `
 <styled.div>
   <styled.div>
-    <CardDeveloperTools
-      onClick={[Function]}
-    />
+    <CardDeveloperTools />
   </styled.div>
   <styled.div>
-    <CardReact
-      onClick={[Function]}
-    />
+    <CardReact />
   </styled.div>
   <styled.div>
-    <CardTesting
-      onClick={[Function]}
-    />
+    <CardTesting />
   </styled.div>
   <styled.div>
-    <CardRedux
-      onClick={[Function]}
-    />
+    <CardRedux />
   </styled.div>
   <styled.div>
-    <CardLibraries
-      onClick={[Function]}
-    />
+    <CardLibraries />
   </styled.div>
   <styled.div>
-    <CardStudy
-      onClick={[Function]}
-    />
+    <CardStudy />
   </styled.div>
 </styled.div>
 `;

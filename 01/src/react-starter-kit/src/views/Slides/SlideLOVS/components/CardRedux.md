@@ -1,3 +1,3 @@
 ```js
-<CardRedux onClick={()=>null}/>
+<CardRedux />
 ```

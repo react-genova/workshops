@@ -5,6 +5,10 @@ module.exports = {
       components: 'src/views/Slides/**/components/**/Slide*.js'
     },
     {
+      name: 'Slider',
+      components: 'src/views/Slider/**/components/**/*.js'
+    },
+    {
       name: 'Cards',
       components: 'src/views/Slides/**/components/**/Card*.js'
     },

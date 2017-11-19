@@ -2,8 +2,6 @@
 
 exports[`Slide Conclusions snapshot check 1`] = `
 <styled.div>
-  <CardConclusions
-    onClick={[Function]}
-  />
+  <CardConclusions />
 </styled.div>
 `;

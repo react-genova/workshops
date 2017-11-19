@@ -6,8 +6,7 @@ import CardTesting from '../CardTesting';
 describe('Card Testing', () => {
 
     it('snapshot check', () => {
-        const onClick = (url:string)=>{url.toLocaleLowerCase();};
-        const component = shallow(<CardTesting onClick={onClick} />);
+        const component = shallow(<CardTesting />);
         expect(component).toMatchSnapshot();
     });
 

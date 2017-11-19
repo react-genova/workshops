@@ -4,20 +4,17 @@ exports[`CardElement component nested CardElement snapshot 1`] = `
 <styled.div>
   <LabelLink
     description="A not  exhaustive list of search engines"
-    onClick={[Function]}
     title="Search engines"
     url=""
   />
   <styled.div>
     <CardElement
       description="One of the best search engine"
-      onClick={[Function]}
       title="Google"
       url="https://www.google.it/"
     />
     <CardElement
       description="Another search engine"
-      onClick={[Function]}
       title="Duck Duck Go"
       url="https://duckduckgo.com/"
     />
@@ -29,7 +26,6 @@ exports[`CardElement component simple CardElement snapshot 1`] = `
 <styled.div>
   <LabelLink
     description="One of the best search engine"
-    onClick={[Function]}
     title="Google"
     url="https://www.google.it/"
   />

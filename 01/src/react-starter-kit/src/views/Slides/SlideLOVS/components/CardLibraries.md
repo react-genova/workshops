@@ -1,3 +1,3 @@
 ```js
-<CardLibraries onClick={()=>null}/>
+<CardLibraries />
 ```

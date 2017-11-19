@@ -7,37 +7,31 @@ exports[`Card Study snapshot check 1`] = `
 >
   <CardElement
     description="really, are you serious?"
-    onClick={[Function]}
     title="project folder structure"
     url=""
   />
   <CardElement
     description="the redux source of power"
-    onClick={[Function]}
     title="middleware in redux"
     url=""
   />
   <CardElement
     description="how inheritance works in math"
-    onClick={[Function]}
     title="Higher Order Components"
     url=""
   />
   <CardElement
     description="redux-saga, redux-effects, redux-cycles"
-    onClick={[Function]}
     title="avoiding side effects"
     url=""
   />
   <CardElement
     description="I am root"
-    onClick={[Function]}
     title="npm and package.json"
     url=""
   />
   <CardElement
     description="FRP or F&RP, the long fight"
-    onClick={[Function]}
     title="Functional Reactive Programming"
     url=""
   />

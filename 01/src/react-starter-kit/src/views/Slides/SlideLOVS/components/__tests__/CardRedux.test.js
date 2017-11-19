@@ -6,8 +6,7 @@ import CardRedux from '../CardRedux';
 describe('Card Redux', () => {
 
     it('snapshot check', () => {
-        const onClick = (url:string)=>{url.toLocaleLowerCase();};
-        const component = shallow(<CardRedux onClick={onClick} />);
+        const component = shallow(<CardRedux />);
         expect(component).toMatchSnapshot();
     });
 

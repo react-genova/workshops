@@ -1,3 +1,3 @@
 ```js
-<CardDeveloperTools onClick={()=>null}/>
+<CardDeveloperTools />
 ```

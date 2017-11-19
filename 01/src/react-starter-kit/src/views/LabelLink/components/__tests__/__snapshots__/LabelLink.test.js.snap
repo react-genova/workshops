@@ -2,13 +2,13 @@
 
 exports[`LabelLink component simple label snapshot 1`] = `
 <styled.div>
-  <styled.div
-    onClick={[Function]}
+  <styled.a
+    href="http://www.google.it/"
+    target="_blank"
     title="http://www.google.it/"
-    underline={true}
   >
     Google
-  </styled.div>
+  </styled.a>
   <styled.div>
     One of the best search engine
   </styled.div>

@@ -7,19 +7,16 @@ exports[`Card React snapshot check 1`] = `
 >
   <CardElement
     description="the tool which simplifies the mess"
-    onClick={[Function]}
     title="create-react-app"
     url="https://github.com/facebookincubator/create-react-app/"
   />
   <CardElement
     description="HOC based useful library"
-    onClick={[Function]}
     title="recompose"
     url="https://github.com/acdlite/recompose/"
   />
   <CardElement
     description="CSS inline to the next level"
-    onClick={[Function]}
     title="styled-components"
     url="https://www.styled-components.com/"
   />

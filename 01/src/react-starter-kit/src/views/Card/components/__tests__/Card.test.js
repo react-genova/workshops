@@ -7,7 +7,7 @@ describe('Card component', () => {
 
     it('Card snapshot', () => {
         const component = shallow(
-            <Card title="I have 2 children">
+            <Card title="I have 2 children" description="">
                 <div>The first child</div>
                 <div>The second child</div>
             </Card>

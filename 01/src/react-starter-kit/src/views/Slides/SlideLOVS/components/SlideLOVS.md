@@ -1,3 +1,3 @@
 ```js
-<SlideLOVS openURL={()=>null}/>
+<SlideLOVS />
 ```

@@ -6,7 +6,6 @@ type Props = {
     title:string,
     description:string,
     url:string,
-    onClick:(url:string)=>void
 };
 
 const Container = styled.div`
@@ -15,12 +14,9 @@ const Container = styled.div`
     font-family: Arial, Helvetica, sans-serif;
 `;
 
-type TitleProps = { underline:boolean };
-const Title = styled.div`
+const Title = styled.a`
     color: #000080;
     font-size: 1.4em;
-    cursor: ${({underline}:TitleProps) => underline ? 'pointer' : 'default'};
-    text-decoration: ${({underline}:TitleProps) => underline ? 'underline' : undefined};
 `;
 
 const Description = styled.div`
@@ -28,9 +24,9 @@ const Description = styled.div`
     color: #808080;
 `;
 
-const LabelLink = ({title, description, url, onClick}:Props) => (
+const LabelLink = ({title, description, url}:Props) => (
     <Container>
-        <Title onClick={() => onClick(url)} underline={url.length>0} title={url}>{title}</Title>
+        <Title href={url.length>0 ? url : undefined} title={url} target="_blank">{title}</Title>
         <Description>{description}</Description>
     </Container>
 );

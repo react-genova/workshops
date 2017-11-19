@@ -7,19 +7,16 @@ exports[`Card Testing snapshot check 1`] = `
 >
   <CardElement
     description="the test engine"
-    onClick={[Function]}
     title="jest"
     url="https://facebook.github.io/jest/"
   />
   <CardElement
     description="design your components"
-    onClick={[Function]}
     title="react-styleguidist"
     url="https://react-styleguidist.js.org/"
   />
   <CardElement
     description="test your components"
-    onClick={[Function]}
     title="enzyme"
     url="https://github.com/airbnb/enzyme"
   />

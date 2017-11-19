@@ -6,8 +6,7 @@ import CardLibraries from '../CardLibraries';
 describe('Card Libraries', () => {
 
     it('snapshot check', () => {
-        const onClick = (url:string)=>{url.toLocaleLowerCase();};
-        const component = shallow(<CardLibraries onClick={onClick} />);
+        const component = shallow(<CardLibraries />);
         expect(component).toMatchSnapshot();
     });
 

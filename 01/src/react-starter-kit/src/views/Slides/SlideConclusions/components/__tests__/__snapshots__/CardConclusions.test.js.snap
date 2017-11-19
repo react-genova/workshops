@@ -7,19 +7,16 @@ exports[`Card Conclusions snapshot check 1`] = `
 >
   <CardElement
     description=""
-    onClick={[Function]}
     title="Just the first time"
     url=""
   >
     <CardElement
       description=""
-      onClick={[Function]}
       title="Download and install Node.js"
       url=""
     />
     <CardElement
       description=""
-      onClick={[Function]}
       title="Download and install Visual Studio Code and its plugins"
       url=""
     />
@@ -29,7 +26,6 @@ exports[`Card Conclusions snapshot check 1`] = `
   </CardElement>
   <CardElement
     description=""
-    onClick={[Function]}
     title="Each time you create an app"
     url=""
   >
@@ -50,31 +46,26 @@ exports[`Card Conclusions snapshot check 1`] = `
     />
     <CardElement
       description=""
-      onClick={[Function]}
       title="Configure your 'package.json' file"
       url="https://github.com/react-genova/workshops/blob/master/01/resources/pacakge.json.addons"
     />
     <CardElement
       description=""
-      onClick={[Function]}
       title="Add linter config file '.eslintrc'"
       url="https://github.com/react-genova/workshops/blob/master/01/resources/.eslintrc"
     />
     <CardElement
       description=""
-      onClick={[Function]}
       title="Add flow config file '.flowconfig'"
       url="https://github.com/react-genova/workshops/blob/master/01/resources/.flowconfig"
     />
     <CardElement
       description=""
-      onClick={[Function]}
       title="Add styleguidist config file 'styleguide.config.js'"
       url="https://github.com/react-genova/workshops/blob/master/01/resources/styleguide.config.js"
     />
     <CardElement
       description=""
-      onClick={[Function]}
       title="Add test config file 'setupTests.js'"
       url="https://github.com/react-genova/workshops/blob/master/01/resources/setupTests.js"
     />

@@ -22,18 +22,14 @@ const CardPad = styled.div`
     padding: 0.4em;
 `;
 
-type Props = {
-    openURL:(url:string)=>void
-};
-
-const SlideLOVS = ({openURL}:Props) => (
+const SlideLOVS = () => (
     <Container>
-        <CardPad><CardDeveloperTools onClick={openURL} /></CardPad>
-        <CardPad><CardReact onClick={openURL} /></CardPad>
-        <CardPad><CardTesting onClick={openURL} /></CardPad>
-        <CardPad><CardRedux onClick={openURL} /></CardPad>
-        <CardPad><CardLibraries onClick={openURL} /></CardPad>
-        <CardPad><CardStudy onClick={openURL} /></CardPad>
+        <CardPad><CardDeveloperTools /></CardPad>
+        <CardPad><CardReact /></CardPad>
+        <CardPad><CardTesting /></CardPad>
+        <CardPad><CardRedux /></CardPad>
+        <CardPad><CardLibraries /></CardPad>
+        <CardPad><CardStudy /></CardPad>
     </Container>
 );
 

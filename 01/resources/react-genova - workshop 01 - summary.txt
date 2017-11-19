@@ -1,5 +1,5 @@
 ------------------------------------------------------------------
- SLIDE 01: All you need is L.O.V.S - List Of Valuable Suggestions
+ SLIDE: All you need is L.O.V.S - List Of Valuable Suggestions
 ------------------------------------------------------------------
 Developer tools (setting you up, boring part)
 - Node.js (the engine behind the curtain) [https://nodejs.org/it/]
@@ -40,7 +40,7 @@ In-depth technological study (not enough? some more stuff)
 - Functional Reactive Programming (FRP or F&RP, the long fight)
 
 ---------------------------------------------------------
- SLIDE 02: Conclusions - Yeah, interesting, so in short?
+ SLIDE: Conclusions - Yeah, interesting, so in short?
 --------------------------------------------------------- 
 Just the first time
 - Download and install Node.js

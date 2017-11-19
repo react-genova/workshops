@@ -1,3 +1,3 @@
 ```js
-<CardStudy onClick={()=>null}/>
+<CardStudy />
 ```

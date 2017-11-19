@@ -13,13 +13,9 @@ const Container = styled.div`
     align-content: center;
 `;
 
-type Props = {
-    openURL:(url:string)=>void
-};
-
-const SlideConclusions = ({openURL}:Props) => (
+const SlideConclusions = () => (
     <Container>
-        <CardConclusions onClick={openURL} />
+        <CardConclusions />
     </Container>
 );
 

@@ -6,8 +6,7 @@ import SlideConclusions from '../SlideConclusions';
 describe('Slide Conclusions', () => {
 
     it('snapshot check', () => {
-        const openURL = (url:string)=>{url.toLocaleLowerCase();};
-        const component = shallow(<SlideConclusions openURL={openURL} />);
+        const component = shallow(<SlideConclusions />);
         expect(component).toMatchSnapshot();
     });
 

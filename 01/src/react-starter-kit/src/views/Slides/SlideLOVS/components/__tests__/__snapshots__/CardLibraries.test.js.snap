@@ -7,19 +7,16 @@ exports[`Card Libraries snapshot check 1`] = `
 >
   <CardElement
     description="a fetch library"
-    onClick={[Function]}
     title="axios"
     url="https://github.com/axios/axios"
   />
   <CardElement
     description="the mother of all underscore"
-    onClick={[Function]}
     title="lodash"
     url="https://lodash.com/"
   />
   <CardElement
     description="immutable, from heaven to hell and back"
-    onClick={[Function]}
     title="immutable"
     url="https://facebook.github.io/immutable-js/"
   />

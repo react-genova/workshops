@@ -7,43 +7,36 @@ exports[`Card Developer Tools snapshot check 1`] = `
 >
   <CardElement
     description="the engine behind the curtain"
-    onClick={[Function]}
     title="Node.js"
     url="https://nodejs.org/it/"
   />
   <CardElement
     description="your IDE and your best friend"
-    onClick={[Function]}
     title="Visual Studio Code"
     url="https://code.visualstudio.com/"
   >
     <CardElement
       description="Babel ES6/ES7"
-      onClick={[Function]}
       title=""
       url=""
     />
     <CardElement
       description="ESLint"
-      onClick={[Function]}
       title=""
       url=""
     />
     <CardElement
       description="Flow Language Support"
-      onClick={[Function]}
       title=""
       url=""
     />
     <CardElement
       description="Path Intellisense"
-      onClick={[Function]}
       title=""
       url=""
     />
     <CardElement
       description="Relative Path"
-      onClick={[Function]}
       title=""
       url=""
     />
