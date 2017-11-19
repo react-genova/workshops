@@ -14,12 +14,13 @@ const TitleContainer = styled.div`
 `;
 
 const Title = styled.div`
-    font-size: 1.4em;
+    font-size: 1.6em;
     font-weight: bold;
+    color: #000080;
 `;
 
 const SubTitle = styled.div`
-    font-size: 1.1em;
+    font-size: 1.3em;
     color: #808080;
 `;
 

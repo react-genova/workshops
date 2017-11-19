@@ -1,0 +1,3 @@
+```js
+<SlideLOVS openURL={()=>null}/>
+```

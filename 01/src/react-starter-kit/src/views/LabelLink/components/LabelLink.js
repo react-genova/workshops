@@ -17,13 +17,14 @@ const Container = styled.div`
 
 type TitleProps = { underline:boolean };
 const Title = styled.div`
-    color: #404040;
-    font-size: 1.2em;
+    color: #000080;
+    font-size: 1.4em;
     cursor: ${({underline}:TitleProps) => underline ? 'pointer' : 'default'};
     text-decoration: ${({underline}:TitleProps) => underline ? 'underline' : undefined};
 `;
 
 const Description = styled.div`
+    font-size: 1.2em;
     color: #808080;
 `;
 
