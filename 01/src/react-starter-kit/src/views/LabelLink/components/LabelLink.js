@@ -15,16 +15,16 @@ const Container = styled.div`
     font-family: Arial, Helvetica, sans-serif;
 `;
 
+type TitleProps = { underline:boolean };
 const Title = styled.div`
-    color: black;
-    font-size: 1.3em;
-    font-weight: bold;
-    cursor: ${props => props.underline ? 'pointer' : 'default'};
-    text-decoration: ${props => props.underline ? 'underline' : undefined};
+    color: #404040;
+    font-size: 1.2em;
+    cursor: ${({underline}:TitleProps) => underline ? 'pointer' : 'default'};
+    text-decoration: ${({underline}:TitleProps) => underline ? 'underline' : undefined};
 `;
 
 const Description = styled.div`
-    color: darkgray;
+    color: #808080;
 `;
 
 const LabelLink = ({title, description, url, onClick}:Props) => (

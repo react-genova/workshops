@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card component Card snapshot 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div>
+      I have 2 children
+    </styled.div>
+  </styled.div>
+  <styled.div>
+    <div>
+      The first child
+    </div>
+    <div>
+      The second child
+    </div>
+  </styled.div>
+</styled.div>
+`;
