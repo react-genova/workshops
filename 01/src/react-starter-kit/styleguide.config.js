@@ -2,10 +2,14 @@ module.exports = {
    sections: [
     {
       name: 'Slider',
-      components: 'src/views/Slider/**/components/**/*.js'
+      components: 'src/views/Slider/**/containers/**/*.js'
     },
     {
       name: 'Slides',
+      components: 'src/views/Slider/**/components/**/*.js'
+    },
+    {
+      name: 'Slides content',
       components: 'src/views/Slides/**/components/**/Slide*.js'
     },
     {

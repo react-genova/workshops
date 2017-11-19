@@ -15,7 +15,7 @@ const SlideBody = styled.div`
     display: flex;
     justify-content: center;
     flex: 1;
-    background-color: #dae6f1;
+    background-color: #edf1f8;
     margin-top: 0.2em;
     margin-bottom: 0.2em;
 `;
