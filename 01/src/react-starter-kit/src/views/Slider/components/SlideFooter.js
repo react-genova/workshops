@@ -5,7 +5,6 @@ import styled from 'styled-components';
 const Container = styled.div`
     display: flex;
     flex-direction: column;
-    width: 100%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.8em;
     background-color: #264d73;

@@ -1,12 +1,12 @@
 module.exports = {
    sections: [
     {
-      name: 'Slides',
-      components: 'src/views/Slides/**/components/**/Slide*.js'
-    },
-    {
       name: 'Slider',
       components: 'src/views/Slider/**/components/**/*.js'
+    },
+    {
+      name: 'Slides',
+      components: 'src/views/Slides/**/components/**/Slide*.js'
     },
     {
       name: 'Cards',

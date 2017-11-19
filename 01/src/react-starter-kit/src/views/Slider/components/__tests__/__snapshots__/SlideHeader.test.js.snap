@@ -2,7 +2,11 @@
 
 exports[`SlideHeader component simple header snapshot 1`] = `
 <styled.div>
-  <styled.div />
-  <styled.div />
+  <styled.div>
+    react-genova
+  </styled.div>
+  <styled.div>
+    workshop 01
+  </styled.div>
 </styled.div>
 `;
