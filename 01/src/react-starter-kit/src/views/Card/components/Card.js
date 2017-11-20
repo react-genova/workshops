@@ -7,7 +7,8 @@ const Container = styled.div`
     background-color: white;
     border: 0.035em solid #C8C8C8;
     font-family: Arial, Helvetica, sans-serif;
-    max-width: 90%;
+    max-width: 50%;
+    min-width: 28em;
 `;
 
 const TitleContainer = styled.div`

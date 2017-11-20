@@ -9,6 +9,7 @@ const Container = styled.div`
     bottom: 0;
     top: 0;
     right: 0;
+    pointer-events:none;
 `;
 
 const NavBar = styled.div`
@@ -21,6 +22,7 @@ const NavBar = styled.div`
     background-color: transparent;
     opacity: 0;
     cursor: pointer;
+    pointer-events:auto;
     &:hover {
         opacity: 1;
     }
