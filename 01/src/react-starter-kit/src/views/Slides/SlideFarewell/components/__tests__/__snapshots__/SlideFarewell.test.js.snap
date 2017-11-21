@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slide Farewell snapshot check 1`] = `
+<styled.div>
+  <styled.div>
+    Thank You All
+  </styled.div>
+  <styled.div />
+  <styled.div>
+    https:/github.com/react-genova
+  </styled.div>
+</styled.div>
+`;
