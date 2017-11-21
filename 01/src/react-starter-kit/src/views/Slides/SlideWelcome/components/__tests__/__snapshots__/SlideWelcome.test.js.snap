@@ -8,5 +8,18 @@ exports[`Slide Welcome snapshot check 1`] = `
   <styled.div>
     workshop 01 - React Starter Kit
   </styled.div>
+  <styled.div />
+  <styled.div>
+    git clone https://github.com/react-genova/workshops
+  </styled.div>
+  <styled.div>
+    cd ./workshops/01/src/react-starter-kit
+  </styled.div>
+  <styled.div>
+    npm install
+  </styled.div>
+  <styled.div>
+    npm start
+  </styled.div>
 </styled.div>
 `;

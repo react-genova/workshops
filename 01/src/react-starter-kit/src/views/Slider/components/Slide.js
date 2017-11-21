@@ -8,6 +8,7 @@ import SlideFooter from './SlideFooter';
 const Container = styled.div`
     display: flex;
     min-height: 100vh;
+    max-height: 100vh;
     flex-direction: column;
 `;
 
@@ -18,6 +19,7 @@ const SlideBody = styled.div`
     background-color: #edf1f8;
     margin-top: 0.2em;
     margin-bottom: 0.2em;
+    overflow: hidden;
 `;
 
 type Props = {
