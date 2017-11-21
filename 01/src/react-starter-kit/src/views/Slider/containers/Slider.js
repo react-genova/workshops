@@ -1,5 +1,6 @@
 //@flow
 import * as React from 'react';
+import styled, { keyframes } from 'styled-components';
 
 import SlideNavigator from '../components/SlideNavigator';
 
@@ -10,6 +11,24 @@ type Props = {
 type State = {
     selected:number,
 };
+
+export const keyFrameExampleOne = keyframes`
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+`
+
+const Container = styled.div`
+    position: relative;
+`;
+
+const SlideAnimator = styled.div`
+    animation-name: ${keyFrameExampleOne};
+    animation-duration: 2s;    
+`;
 
 class Slider extends React.Component<Props, State> {
 
@@ -32,10 +51,10 @@ class Slider extends React.Component<Props, State> {
         const { selected } = this.state;
 
         return (
-            <div style={{position: 'relative'}}>
-                { children.map((child, index) => index === selected && child) }
+            <Container>
+                { children.map((child, index) => index === selected && <SlideAnimator key={index}>{child}</SlideAnimator>) }
                 <SlideNavigator onNext={this.onNext} onPrev={this.onPrevious} />
-            </div>
+            </Container>
         );
     }
 }
