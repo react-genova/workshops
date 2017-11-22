@@ -17,6 +17,13 @@ module.exports = {
       components: 'src/views/Slides/**/components/**/Card*.js'
     },
     {
+      name: 'Transformations',
+      components: ()=>[
+        'src/views/Transform/components/OpacityIn.js',
+        'src/views/Transform/components/Scale.js',
+      ]
+    },
+    {
       name: 'Components',
       components: ()=>[
         'src/views/Card/components/Card.js',

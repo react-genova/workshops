@@ -30,7 +30,7 @@ const SlideFarewell = () => (
     <Container>
         <Title>Thank You All</Title>
         <Separator />
-        <SubTitle>{'https:/github.com/react-genova'}</SubTitle>
+        <SubTitle>{'https://github.com/react-genova'}</SubTitle>
     </Container>
 );
 
