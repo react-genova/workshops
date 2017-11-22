@@ -3,6 +3,7 @@ import * as React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 import SlideNavigator from '../components/SlideNavigator';
+import SlideProgress from '../components/SlideProgress';
 
 type Props = {
     children:React.Node // missing deep flow type on node
@@ -58,6 +59,7 @@ class Slider extends React.Component<Props, State> {
             <Container>
                 <Body>
                 { children.map((child, index) => index === selected && <SlideAnimator key={index}>{child}</SlideAnimator>) }
+                <SlideProgress count={React.Children.count(children)} selected={selected} />
                 </Body>
                 <SlideNavigator onNext={this.onNext} onPrev={this.onPrevious} />
             </Container>

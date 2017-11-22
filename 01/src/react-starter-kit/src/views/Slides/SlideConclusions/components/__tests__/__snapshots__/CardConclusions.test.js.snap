@@ -23,15 +23,15 @@ exports[`Card Conclusions snapshot check 1`] = `
     <LabelTerminal
       text="npm install flow-bin flow-typed"
     />
+    <LabelTerminal
+      text="npm install create-react-app"
+    />
   </CardElement>
   <CardElement
     description=""
     title="Each time you create an app"
     url=""
   >
-    <LabelTerminal
-      text="npm install create-react-app"
-    />
     <LabelTerminal
       text="create-react-app your-app-pretty-cool-name"
     />
