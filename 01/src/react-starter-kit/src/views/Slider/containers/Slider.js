@@ -30,6 +30,10 @@ const SlideAnimator = styled.div`
     animation-duration: 2s;    
 `;
 
+const Body = styled.div`
+    position: relative;
+`;
+
 class Slider extends React.Component<Props, State> {
 
     state = {
@@ -52,7 +56,9 @@ class Slider extends React.Component<Props, State> {
 
         return (
             <Container>
+                <Body>
                 { children.map((child, index) => index === selected && <SlideAnimator key={index}>{child}</SlideAnimator>) }
+                </Body>
                 <SlideNavigator onNext={this.onNext} onPrev={this.onPrevious} />
             </Container>
         );

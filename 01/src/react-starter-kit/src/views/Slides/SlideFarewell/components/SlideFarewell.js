@@ -17,7 +17,7 @@ const Title = styled.div`
 const SubTitle = styled.div`
     font-size: 3em;
     color: #808080;
-    padding-top: 1em;
+    padding-top: 0.3em;
 `;
 
 const Separator = styled.div`
@@ -30,6 +30,8 @@ const SlideFarewell = () => (
     <Container>
         <Title>Thank You All</Title>
         <Separator />
+        <SubTitle>{'https://www.facebook.com/reactgenova'}</SubTitle>
+        <SubTitle>{'reactgenova@gmail.com'}</SubTitle>
         <SubTitle>{'https://github.com/react-genova'}</SubTitle>
     </Container>
 );

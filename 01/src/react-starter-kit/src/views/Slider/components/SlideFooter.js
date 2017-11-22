@@ -4,12 +4,13 @@ import styled from 'styled-components';
 
 const Container = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.8em;
+    justify-content: space-between;
+    font-size: 1.2em;
     background-color: #264d73;
     color: white;
-    padding: 0.3em;
+    padding: 0.3em 0.6em;
 `;
 
 const Link = styled.a`
@@ -19,7 +20,8 @@ const Link = styled.a`
 const SlideFooter = () => (
     <Container>
         <Link href="mailto:reactgenova@gmail.com" style={{paddingBottom:'0.3em'}} target="_blank">reactgenova@gmail.com</Link>
-        <Link href="https://github.com/react-genova/" target="_blank">https://github.com/react-genova/</Link>
+        <Link href="https://www.facebook.com/reactgenova" target="_blank">https://www.facebook.com/reactgenova</Link>
+        <Link href="https://github.com/react-genova" target="_blank">https://github.com/react-genova</Link>
     </Container>
 );
 
