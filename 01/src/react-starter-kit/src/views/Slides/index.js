@@ -9,3 +9,4 @@ export {default as SlideLibraries} from './SlideLibraries';
 export {default as SlideRedux} from './SlideRedux';
 export {default as SlideStudy} from './SlideStudy';
 export {default as SlideTesting} from './SlideTesting';
+export {default as SlideLogo} from './SlideLogo';

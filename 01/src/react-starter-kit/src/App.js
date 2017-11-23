@@ -4,13 +4,14 @@ import Slider, { Slide } from './views/Slider';
 import { 
     SlideWelcome, SlideConclusions, SlideLOVS, SlideFarewell,
     SlideReact, SlideDeveloperTools, SlideTesting, SlideRedux,
-    SlideLibraries, SlideStudy
+    SlideLibraries, SlideStudy, SlideLogo
 } from './views/Slides';
 
 class App extends Component {
   render() {
     return (
         <Slider>
+            <SlideLogo />
             <Slide title="Welcome" description="to react">
                 <SlideWelcome />
             </Slide>
