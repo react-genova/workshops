@@ -1,6 +1,8 @@
 //@flow
 import React from 'react';
 import SlideHeader from '../SlideHeader';
+import 'jest-enzyme'
+import 'jest-styled-components';
 import { shallow } from 'enzyme';
 
 describe('SlideHeader component', () => {
