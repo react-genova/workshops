@@ -6,8 +6,8 @@ An extension of Create React App, with all the stuff you need to develop a full,
 
 ### Developer tools (setting you up, boring part)
 
- * [[Node.js (the engine behind the curtain)](https://nodejs.org/it/)
- * [[Visual Studio Code (you IDE and your best friend)](https://code.visualstudio.com/)
+ * [Node.js (the engine behind the curtain)](https://nodejs.org/it/)
+ * [Visual Studio Code (you IDE and your best friend)](https://code.visualstudio.com/)
 	- Babel ES6/ES7
 	- ESLint
 	- Flow Language Support
@@ -16,16 +16,16 @@ An extension of Create React App, with all the stuff you need to develop a full,
 
 ### React (here is the big guy)
 
- * [[create-react-app (the tool which simplifies the mess)](https://github.com/facebookincubator/create-react-app)
- * [[recompose (HOC based useful library)](https://github.com/acdlite/recompose)
- * [[styled-components (CSS inline to the next level)](https://www.styled-components.com/)
+ * [create-react-app (the tool which simplifies the mess)](https://github.com/facebookincubator/create-react-app)
+ * [recompose (HOC based useful library)](https://github.com/acdlite/recompose)
+ * [styled-components (CSS inline to the next level)](https://www.styled-components.com/)
 
 ### Redux (Dan Abramov AKA gaeron AKA the genius)
 
- * [[redux (the core of the business logic)](https://redux.js.org/)
- * [[react-redux (link our two main actors)](https://github.com/reactjs/react-redux)
- * [[reselect (cool selectors management)](https://github.com/reactjs/reselect)
- * [[redux-immutable (immutable in redux store)](https://github.com/gajus/redux-immutable)
+ * [redux (the core of the business logic)](https://redux.js.org/)
+ * [react-redux (link our two main actors)](https://github.com/reactjs/react-redux)
+ * [reselect (cool selectors management)](https://github.com/reactjs/reselect)
+ * [redux-immutable (immutable in redux store)](https://github.com/gajus/redux-immutable)
 
 ### Testing (the better you test, the longer you rest)
 
