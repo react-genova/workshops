@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  div.main
+    h1 Your First Node.js Server
+    h2 Description
+    p A simple Node.js + Express.js + Jade server. 
+    h2 API
+    ul
+      li #[a(href="/messages") /messages]
+        p retrieves all stored messages from the server
+        p returns a json object with a map of messages, where the map key is the message id
+        div.code
+          div.i1 {
+          div.i2 "1": {
+          div.i3 text: "Welcome",
+          div.i3 id: "1",
+          div.i3 time: 32131545631
+          div.i2 },
+          div.i2 "2": {
+          div.i3 text: "Let's play master and servant",
+          div.i3 id: "2",
+          div.i3 time: 13132123132,
+          div.i2 }
+          div.i1 }
+      li /message { text:string }
+        p POST a new message to the server
