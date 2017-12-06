@@ -48,7 +48,7 @@ An extension of Create React App, with all the stuff you need to develop a full,
  * npm and package.json (I am root)
  * Functional Reactive Programming (FRP or F&RP, the long fight)
 
-## SLIDE: Conclusions - Yeah, interesting, so in short?
+## Conclusions - Yeah, interesting, so in short?
 
 ### Just the first time
  * Download and install Node.js
