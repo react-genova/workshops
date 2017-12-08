@@ -3,27 +3,29 @@ extends layout
 block content
   div.main
     h1 Your First Node.js Server
-    h2 Description
-    p A simple Node.js + Express.js + Jade server. 
-    h2 API
-    ul
-      li #[a(href="/movies") /movies]
-        p retrieves all stored movies from the server
-        p returns a json object with a map of movies, where the map key is the message id
-        div.code
-          div.i1 {
-          div.i2 "1": {
-          div.i3 id: "1",
-          div.i3 title: "Il Grande Lebowski",
-          div.i3 original: "The Big Lebowski",
-          div.i3 rate: 3
-          div.i2 },
-          div.i2 "2": {
-          div.i3 id: "2",
-          div.i3 title: "Ave, Cesare!",
-          div.i3 original: "Hail, Caesar!",
-          div.i3 rate: 4
-          div.i2 }
-          div.i1 }
-      li /rate { id:string, rate:number }
-        p POST a rate for a movie
+    div.card
+      h2 Description
+      p.h2 A simple Node.js + Express.js + Jade server. 
+    div.card
+      h2 API
+      ul
+        li #[a(href="/movies") /movies]
+          p retrieves all stored movies from the server
+          p returns a json object with a map of movies, where the map key is the message id
+          div.code
+            p.i1 {
+            p.i2 "1": {
+            p.i3 id: "1",
+            p.i3 title: "Il Grande Lebowski",
+            p.i3 original: "The Big Lebowski",
+            p.i3 rating: 3
+            p.i2 },
+            p.i2 "2": {
+            p.i3 id: "2",
+            p.i3 title: "Ave, Cesare!",
+            p.i3 original: "Hail, Caesar!",
+            p.i3 rating: 4
+            p.i2 }
+            p.i1 }
+        li /rate { id:string, rating:number }
+          p POST a rating for a movie
