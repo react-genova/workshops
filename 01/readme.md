@@ -1,7 +1,7 @@
 # React Starter Kit
 
-An extension of Create React App, with all the stuff you need to develop a full, functional and complex web application.
-The react-starter-kit inside src folder is a the React Application coataining all the slide shown during the presentation. It's a cool react example, not the easiest one, but effective. If you're looking for a simplier application, have a look at workshop 02.
+An extension of Create React App, with all the stuff you need to develop a full, functional and complex web application.  
+The react-starter-kit inside src folder is a the React Application coataining all the slide shown during the presentation. It's a cool react example, not the easiest one, but effective. If you're looking for a simplier application, have a look at [Workshop 02](../02).
 
 ## Installation
 
