@@ -29,3 +29,13 @@ block content
             p.i1 }
         li /rate { id:string, rating:number }
           p POST a rating for a movie
+          p on success returns a json object with the modified movie
+          div.code
+            p.i1 {
+            p.i2 id: "1",
+            p.i2 title: "Il Grande Lebowski",
+            p.i2 original: "The Big Lebowski",
+            p.i2 rating: 3
+            p.i1 }
+          p on fail returns null
+          
