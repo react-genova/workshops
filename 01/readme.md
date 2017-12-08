@@ -1,13 +1,22 @@
 # React Starter Kit
 
 An extension of Create React App, with all the stuff you need to develop a full, functional and complex web application.
+The react-starter-kit inside src folder is a the React Application coataining all the slide shown during the presentation. It's a cool react example, not the easiest one, but effective. If you're looking for a simplier application, have a look at workshop 02.
+
+## Installation
+
+ * Download or git clone **workshop** repository
+ * Open a terminal on **01/src/react-starter-kit** folder
+ * Run in the terminal **npm install**
+ * Wait for node modules downloading process
+ * Run in the terminal **npm start**
 
 ## All you need is L.O.V.S - List Of Valuable Suggestions
 
 ### Developer tools (setting you up, boring part)
 
  * [Node.js (the engine behind the curtain)](https://nodejs.org/it/)
- * [Visual Studio Code (you IDE and your best friend)](https://code.visualstudio.com/)
+ * [Visual Studio Code (your IDE and your best friend)](https://code.visualstudio.com/)
 	- Babel ES6/ES7
 	- ESLint
 	- Flow Language Support
@@ -32,6 +41,7 @@ An extension of Create React App, with all the stuff you need to develop a full,
  * [jest (the test engine)](https://facebook.github.io/jest/)
  * [react-styleguidist (design your components)](https://react-styleguidist.js.org/)
  * [enzyme (test your components)](https://github.com/airbnb/enzyme)
+ * static testing (not today. next time. keep in touch)
 
 ### Libraries (and yes, there's no jQuery)
 
