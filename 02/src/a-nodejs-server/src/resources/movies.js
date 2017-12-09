@@ -2,16 +2,20 @@ const dal = require('../dal/dal');
 
 let cache = null;
 
+const initCache = () => { 
+  if(!cache) 
+    cache = dal.getMovies(); 
+  return cache;
+};
+
 const rate = (id, rating) => {
-  if(!cache)
-    cache = dal.getMovies();
+  initCache();
   cache[id] = dal.rate(id, rating);
   return cache[id];
 }
 
 const getMovies = () => {
-  if(!cache)
-    cache = dal.getMovies();
+  initCache();
   return cache;
 };
 
