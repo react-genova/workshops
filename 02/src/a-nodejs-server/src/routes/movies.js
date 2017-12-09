@@ -1,8 +1,8 @@
 const express = require('express');
-const { movies } = require('../resources/movies');
+const { getMovies } = require('../resources/movies');
 
 const router = express.Router();
 
-router.get('/', (req, res, next) => res.send(movies));
+router.get('/', (req, res, next) => res.send(getMovies()));
 
 module.exports = router;

@@ -1,50 +1,18 @@
-let movies = {
-  "1": {
-    id: "1",
-    title: "Il grande Lebowski",
-    original: "The Big Lebowski",
-    rating: 5,
-    year: 1998,
-  },
-  "2": {
-    id: "2",
-    title: "Ave, Cesare!",
-    original: "Hail, Caesar!",
-    rating: 3,
-    year: 2016,
-  },
-  "3": {
-    id: "3",
-    title: "Frantic",
-    original: "Frantic",
-    rating: 3,
-    year: 1988,
-  },
-  "4": {
-    id: "4",
-    title: "Il ritorno dello Jedi",
-    original: "Return of the Jedi",
-    rating: 4,
-    year: 1983,
-  },
-  "5": {
-    id: "5",
-    title: "Blade Runner",
-    original: "Blade Runner",
-    rating: 4,
-    year: 1982,
-  },
-};
+const dal = require('../dal/dal');
+
+let cache = null;
 
 const rate = (id, rating) => {
-  const movie = movies[id];
-  if(movie) {
-    movie.rating = rating;
-    return movie;
-  }
-  else {
-    return null;
-  }
+  if(!cache)
+    cache = dal.getMovies();
+  cache[id] = dal.rate(id, rating);
+  return cache[id];
 }
 
-module.exports = { movies, rate };
+const getMovies = () => {
+  if(!cache)
+    cache = dal.getMovies();
+  return cache;
+};
+
+module.exports = { getMovies, rate };
