@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import styled from 'styled-components';
-import {Container, Divider} from 'semantic-ui-react';
+import {Divider} from 'semantic-ui-react';
 import type {MovieType} from './types'
 import Rating from './Rating'
 
@@ -40,7 +40,7 @@ const Footer = styled.div`
 `;
 
 type Props = MovieType & {
-    onRate:(newRate:number)=>void
+    onRate:(id:string, newRate:number)=>void
 };
   
 const Movie = ({id, title, original, rating, year,onRate}:Props) => (
@@ -52,7 +52,7 @@ const Movie = ({id, title, original, rating, year,onRate}:Props) => (
         </Header>
         <Divider />
         <Footer>
-            <Rating rating={rating} maxRating={5} onRate={onRate}/>
+            <Rating rating={rating} maxRating={5} onRate={(newRate:number)=>{onRate(id,newRate)}}/>
         </Footer>
     </ContainerStyled>
 );

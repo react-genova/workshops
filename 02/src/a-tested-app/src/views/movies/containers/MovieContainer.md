@@ -1,4 +1,4 @@
-### MovieCollection ###
+### MovieContainer ###
 
 ```js
 require('semantic-ui-css/semantic.min.css');
@@ -27,5 +27,5 @@ const movies = [
     }
 ];
 
-<MovieCollection movies={movies} onRate={onRate}/>
+<MovieContainer movies={movies} onRate={onRate}/>
 ```

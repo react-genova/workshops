@@ -2,6 +2,7 @@
   "name": "a-tested-app",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:4242",
   "dependencies": {
     "axios": "^0.17.1",
     "axios-mock-adapter": "^1.10.0",
@@ -15,6 +16,7 @@
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-redux": "^5.0.6",
+    "react-refetch": "^1.0.3",
     "react-scripts": "1.0.17",
     "react-styleguidist": "^6.0.33",
     "react-test-renderer": "^16.1.1",
