@@ -24,6 +24,8 @@
     "redux-logger": "^3.0.6",
     "redux-test-utils": "^0.2.1",
     "reselect": "^3.0.1",
+    "semantic-ui-css": "^2.2.12",
+    "semantic-ui-react": "^0.77.0",
     "styled-components": "^2.2.3"
   },
   "jest": {
