@@ -9,7 +9,7 @@ const ContainerStyled = styled.div`
 background-color: #efefef;
 border: 0.035em solid #C8C8C8;
 padding: 0.5em;
-width:20em;
+width:40em;
 `;
 
 const Header = styled.div`
@@ -40,10 +40,10 @@ const Footer = styled.div`
 `;
 
 type Props = MovieType & {
-    onRate:(id:string, newRate:number)=>void
+    updateRate:(id:string, newRate:number)=>void
 };
   
-const Movie = ({id, title, original, rating, year,onRate}:Props) => (
+const Movie = ({id, title, original, rating, year,updateRate}:Props) => (
     <ContainerStyled>
         <Header>
             <Title>{title}</Title>
@@ -52,7 +52,7 @@ const Movie = ({id, title, original, rating, year,onRate}:Props) => (
         </Header>
         <Divider />
         <Footer>
-            <Rating rating={rating} maxRating={5} onRate={(newRate:number)=>{onRate(id,newRate)}}/>
+            <Rating rating={rating} maxRating={5} id={id} onRate={updateRate}/>
         </Footer>
     </ContainerStyled>
 );
