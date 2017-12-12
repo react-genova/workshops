@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieCollection component MovieCollection snapshot 1`] = `
+<List>
+  <ListItem
+    key="2"
+  >
+    <Movie
+      id="2"
+      original="Hail, Caesar!"
+      rating={3}
+      title="Ave, Cesare!"
+      updateRate={[Function]}
+      year={2016}
+    />
+  </ListItem>
+  <ListItem
+    key="3"
+  >
+    <Movie
+      id="3"
+      original="Frantic"
+      rating={3}
+      title="Frantic"
+      updateRate={[Function]}
+      year={1988}
+    />
+  </ListItem>
+  <ListItem
+    key="4"
+  >
+    <Movie
+      id="4"
+      original="Return of the Jedi"
+      rating={4}
+      title="Il ritorno dello Jedi"
+      updateRate={[Function]}
+      year={1983}
+    />
+  </ListItem>
+</List>
+`;

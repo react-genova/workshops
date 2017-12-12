@@ -10,6 +10,7 @@ background-color: #efefef;
 border: 0.035em solid #C8C8C8;
 padding: 0.5em;
 width:40em;
+margin: auto;
 `;
 
 const Header = styled.div`

@@ -1,7 +1,6 @@
 ### MovieCollection ###
 
 ```js
-require('semantic-ui-css/semantic.min.css');
 const updateRate=(id,newRate)=>{alert(id+": "+newRate);console.log(id,newRate)};
 const movies = [
     {

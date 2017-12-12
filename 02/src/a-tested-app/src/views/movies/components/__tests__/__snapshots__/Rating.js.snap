@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rating component Rating snapshot 1`] = `
+<Rating
+  id="1"
+  maxRating={5}
+  onRate={[Function]}
+  rating={3}
+/>
+`;

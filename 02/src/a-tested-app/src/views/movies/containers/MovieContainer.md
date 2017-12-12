@@ -1,7 +1,6 @@
 ### MovieContainer List ###
 
 ```js
-require('semantic-ui-css/semantic.min.css');
 const postRating=({id,rating})=>{alert(id+": "+rating);console.log(id,rating)};
 const moviesFetch = {
     fulfilled: true,
@@ -36,7 +35,6 @@ const moviesFetch = {
 ### MovieContainer Error ###
 
 ```js
-require('semantic-ui-css/semantic.min.css');
 const postRating=({id,rating})=>{alert(id+": "+rating);console.log(id,rating)};
 const moviesRefresh=()=>{alert("refresh")}
 const moviesFetch = {
@@ -49,7 +47,6 @@ const moviesFetch = {
 ### MovieContainer pending ###
 
 ```js
-require('semantic-ui-css/semantic.min.css');
 const moviesFetch = {
     pending: true
 };

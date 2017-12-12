@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import {Rating as RatingInternal} from 'semantic-ui-react';
-import {withHandlers} from 'recompose'
+import {withHandlers, setDisplayName} from 'recompose'
 
 type Props = {
     rating:number, 
@@ -12,12 +12,15 @@ type Props = {
 
 //const Rating = ({rating, maxRating, onRate}:Props) => <RatingInternal rating={rating} maxRating={maxRating} onRate={(event,data)=>{onRate(data.rating)}}/>;
 
+const onRateHandler = (props:Props) => (event:*,data:{rating:number}) => {
+    props.onRate(props.id, data.rating)
+};
+
 const enhance = withHandlers({
-    onRate: (props:Props) => (event:SyntheticEvent<*>,data:{rating:number}) => {
-        props.onRate(props.id, data.rating)
-    }
+    onRate: onRateHandler
 });
-const RatingInternalEnhanced = enhance(RatingInternal);
+const RatingInternalEnhanced = setDisplayName("Rating")(enhance(RatingInternal));
 const Rating = ({rating, maxRating, onRate,id}:Props) => <RatingInternalEnhanced rating={rating} maxRating={maxRating} id={id} onRate={onRate}/>;
 
+export {onRateHandler};
 export default Rating;
