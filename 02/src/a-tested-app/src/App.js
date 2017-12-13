@@ -14,7 +14,7 @@ class App extends Component {
               textAlign='center'
               style={{ minHeight: '5em', padding: '1em 0em' }}
             >
-            <Header>A tested app</Header>
+            <Header style={{fontSize: '3em'}}>Your First React App</Header>
         </Segment>
         <Container>
           <MovieContainer />
