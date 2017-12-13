@@ -8,8 +8,8 @@ const CardConclusions = () => (
         <CardElement title="Just the first time" description="" url="" >
             <CardElement title="Download and install Node.js" description="" url="" />
             <CardElement title="Download and install Visual Studio Code and its plugins" description="" url="" />
-            <LabelTerminal text="npm install flow-bin flow-typed" />
-            <LabelTerminal text="npm install create-react-app" />
+            <LabelTerminal text="npm install -g flow-bin flow-typed" />
+            <LabelTerminal text="npm install -g create-react-app" />
         </CardElement>
         <CardElement title="Each time you create an app" description="" url="" >
             <LabelTerminal text="create-react-app your-app-pretty-cool-name" />

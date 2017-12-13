@@ -63,9 +63,9 @@ The react-starter-kit inside src folder is a the React Application coataining al
 ### Just the first time
  * Download and install Node.js
  * Download and install Visual Studio Code and its plugins
- * ```> npm install flow-bin flow-typed```
+ * ```> npm install -g create-react-app```
+ * ```> npm install -g flow-bin flow-typed```
 ### Each time you create an app
- * ```> npm install create-react-app```
  * ```> create-react-app your-app-pretty-cool-name```
  * ```> cd your-app-pretty-cool-name```
  * ```> npm install --save styled-components recompose react-redux flow-bin redux redux-immutable redux-logger reselect axios axios-mock-adapter immutable lodash enzyme jest-immutable-matchers enzyme-adapter-react-16 enzyme-to-json react-styleguidist react-test-renderer redux-test-utils```
