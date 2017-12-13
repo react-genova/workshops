@@ -1,0 +1,43 @@
+{
+  "name": "your-first-react-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.17.1",
+    "axios-mock-adapter": "^1.10.0",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "enzyme-to-json": "^3.2.2",
+    "flow-bin": "^0.61.0",
+    "immutable": "^3.8.2",
+    "jest-immutable-matchers": "^1.5.0",
+    "lodash": "^4.17.4",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-scripts": "1.0.17",
+    "react-styleguidist": "^6.0.33",
+    "react-test-renderer": "^16.2.0",
+    "recompose": "^0.26.0",
+    "redux": "^3.7.2",
+    "redux-immutable": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-test-utils": "^0.2.2",
+    "reselect": "^3.0.1",
+    "styled-components": "^2.2.4"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },  
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+	"styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build",
+    "flow": "flow"
+  }
+}

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SlideFooter component simple footer snapshot 1`] = `
+<styled.div>
+  <styled.a
+    href="mailto:reactgenova@gmail.com"
+    style={
+      Object {
+        "paddingBottom": "0.3em",
+      }
+    }
+    target="_blank"
+  >
+    reactgenova@gmail.com
+  </styled.a>
+  <styled.a
+    href="https://github.com/react-genova/"
+    target="_blank"
+  >
+    https://github.com/react-genova/
+  </styled.a>
+</styled.div>
+`;

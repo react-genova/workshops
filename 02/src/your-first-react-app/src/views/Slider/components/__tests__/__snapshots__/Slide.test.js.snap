@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slide component simple header snapshot 1`] = `
+<styled.div>
+  <SlideHeader
+    description="to madness"
+    title="Welcome"
+  />
+  <styled.div>
+    <div>
+      WELCOME
+    </div>
+  </styled.div>
+  <SlideFooter />
+</styled.div>
+`;
