@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieContainer component MovieContainer error snapshot 1`] = `
+<Message
+  negative={true}
+>
+  <MessageHeader>
+    Errore
+  </MessageHeader>
+  <p>
+    Errore durante il caricamento dei film
+  </p>
+  <Button
+    as="button"
+    onClick={[Function]}
+  >
+    Ricarica
+  </Button>
+</Message>
+`;
+
+exports[`MovieContainer component MovieContainer loading snapshot 1`] = `
+<Loader
+  active={true}
+/>
+`;
+
+exports[`MovieContainer component MovieContainer movies snapshot 1`] = `
+<MovieCollection
+  movies={
+    Array [
+      Object {
+        "id": "2",
+        "original": "Hail, Caesar!",
+        "rating": 3,
+        "title": "Ave, Cesare!",
+        "year": 2016,
+      },
+      Object {
+        "id": "3",
+        "original": "Frantic",
+        "rating": 3,
+        "title": "Frantic",
+        "year": 1988,
+      },
+      Object {
+        "id": "4",
+        "original": "Return of the Jedi",
+        "rating": 4,
+        "title": "Il ritorno dello Jedi",
+        "year": 1983,
+      },
+    ]
+  }
+  updateRate={[Function]}
+/>
+`;

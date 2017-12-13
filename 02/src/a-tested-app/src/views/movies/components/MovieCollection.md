@@ -1,8 +1,7 @@
 ### MovieCollection ###
 
 ```js
-require('semantic-ui-css/semantic.min.css');
-const onRate=(id,newRate)=>{alert(id+": "+newRate);console.log(id,newRate)};
+const updateRate=(id,newRate)=>{alert(id+": "+newRate);console.log(id,newRate)};
 const movies = [
     {
         id: "2",
@@ -27,5 +26,5 @@ const movies = [
     }
 ];
 
-<MovieCollection movies={movies} onRate={onRate}/>
+<MovieCollection movies={movies} updateRate={updateRate}/>
 ```

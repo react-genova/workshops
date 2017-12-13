@@ -9,4 +9,7 @@ module.exports = {
       components: 'src/views/**/containers/**/*.js'
     }
   ],
+  require: [
+    'semantic-ui-css/semantic.min.css'
+  ]
 };

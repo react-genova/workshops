@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie component Movie snapshot 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div>
+      Il grande Lebowski
+    </styled.div>
+    <styled.div>
+      The Big Lebowski
+    </styled.div>
+    <styled.div>
+      1998
+    </styled.div>
+  </styled.div>
+  <Divider />
+  <styled.div>
+    <Rating
+      id="1"
+      maxRating={5}
+      onRate={[Function]}
+      rating={3}
+    />
+  </styled.div>
+</styled.div>
+`;
