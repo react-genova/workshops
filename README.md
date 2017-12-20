@@ -2,7 +2,7 @@
 
 ## Technologies
 
-Workshops slides, client and server applications are coded:
+Workshops slides, client and server applications are coded with:
 * React.js
 * TDD approach for model using Jest and Enzyme
 * DDD approach for UI using Styleguidist
