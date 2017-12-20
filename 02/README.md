@@ -19,3 +19,22 @@ The server, a Node.js server, exposes through rest api the list of movies and th
 The server main page describes how the server works and documents api rest in details.
 We tested our server using [POSTman](https://www.getpostman.com/) and published the full API on POSTman server.  
 You can find the documentation here: https://documenter.getpostman.com/view/3326280/react-genova/7ELZqMS
+
+## Client
+
+### Installation
+
+ * Download or clone **workshops** repository
+ * Open a terminal on **02/src/a-tested-app**
+ * Run **npm install**
+ * Run **npm start**
+ * Remember to run the server, too.
+
+## Slides
+
+### Installation
+
+ * Download or clone **workshops** repository
+ * Open a terminal on **02/src/your-first-react-app**
+ * Run **npm install**
+ * Run **npm start**
