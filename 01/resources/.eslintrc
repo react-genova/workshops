@@ -42,6 +42,6 @@
 		"prefer-const": 1,
 		"no-multiple-empty-lines": 1,
 		"react/display-name": 1,
-		"react/prop-types": [1, "ignore": ["children"]]
+		"react/prop-types": [1, { "ignore": ["children"] }]
 	}
 }
