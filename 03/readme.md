@@ -170,14 +170,14 @@ React Components can be divided into two main categories: presentational or dumb
 In shorts, what's the difference?  
 _"Presentationals how things look like, containers how things work"_, best description I've ever heard so far, can't reacall the source.  
 Presentational components truly are your user interface collection. They should be a little step over your mockups. And, for sure, they must be little and simple, the more you keep them small the better. If one presentational component starts growing too much, rethink it and split it into several components.  
-Intead you will use Containers components whenever you need some kind of logic or mantain a state, this is why we call them also smart components: they do something more than just show data. They manipulate and store informations on different levels, depending on their complexity. Moreover container components aggregate other presentational or container components. Infact, presentational components can aggregate other presentational components, but it is highly discouraged to let them wrap container ones. It's not only a matter of concerns separation, it's also very importanto to keep thing simple and testable. For example, a presentational component containing a connected container component becomes very hardly to test, infact a connected component will expect a mocked store in order to work.   
+Intead you will use Containers components whenever you need some kind of logic or mantain a state, this is why we call them also smart components: they do something more than just show data. They manipulate and store informations on different levels, depending on their complexity. Moreover container components aggregate other presentational or container components. Infact, presentational components can aggregate other presentational components, but it is highly discouraged to let them wrap container ones. It's not only a matter of concerns separation, it's also very importanto to keep thing simple and testable. For example, a presentational component containing a connected container component becomes very hardly to test, infact a connected component will expect a mocked store in order to work.  
 
 #### 2.6.1 The counter app example
 
 Let's think about a typical example: a counter app. We can create three different components. Two presentational components, a button to increment/decrement and a label to show the actual count, and a container components, to store the count variable and increment or decrement it, when a button is pressed.
 
 ```js
-const Button = ({text, onClick}) => <button onclick={onClick}>{text}</button>;
+const Button = ({text, onClick}) => <button onClick={onClick}>{text}</button>;
 ```
 
 You could ask why we create a button which is just a bare proxy to an actual html tag. Well, first this is a patter, the proxy pattern. Second, it's the right way to proceed, infact you can style your button here and reuse it everywhere in your code base, whithout the need to rewrite/restyle/retest it. We must create a component, everytime we have the possibility to do it. Smae considerations are valid for the following simple component.
@@ -190,21 +190,21 @@ Finally we create our container, which will aggregate our presentational compone
 
 ```js
 class Counter extends Component {
-    state = { count = 0 };
+    state = { count: 0 };
 
     changeCount = changer => () => this.setState({ count: changer(this.state.count) });
 
-    onAddClick = changeCount(count => count + 1);
+    onAddClick = this.changeCount(count => count + 1);
 
-    onRemoveClick = changeCount(count => Math.max(0, count - 1));
+    onRemoveClick = this.changeCount(count => Math.max(0, count - 1));
 
     render() {
         const { count } = this.state;
         return (
             <Fragment>
-                <Button text="+" onClick={this.onAddClick} />
-                <CountValue value={count} />
                 <Button text="-" onClick={this.onRemoveClick} />
+                <CountValue value={count} />
+                <Button text="+" onClick={this.onAddClick} />
             </Fragment>
         );
     }
