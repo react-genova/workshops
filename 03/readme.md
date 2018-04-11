@@ -164,7 +164,60 @@ class MyApp extends Component {
 
 We created three components, two stateless functional and one class component, all written using JSX syntax and composed the same way we would have done using html.
 
-### 2.6 SFC or Class Component
+### 2.6 Presentational vs Container Components
+
+React Components can be divided into two main categories: presentational or dumb components and containers or smart components. Both can be SFC or Class, even if 95% ofyour presentational components will be SFC and 90% of your containers will be classes.  
+In shorts, what's the difference?  
+_"Presentationals how things look like, containers how things work"_, best description I've ever heard so far, can't reacall the source.  
+Presentational components truly are your user interface collection. They should be a little step over your mockups. And, for sure, they must be little and simple, the more you keep them small the better. If one presentational component starts growing too much, rethink it and split it into several components.  
+Intead you will use Containers components whenever you need some kind of logic or mantain a state, this is why we call them also smart components: they do something more than just show data. They manipulate and store informations on different levels, depending on their complexity. Moreover container components aggregate other presentational or container components. Infact, presentational components can aggregate other presentational components, but it is highly discouraged to let them wrap container ones. It's not only a matter of concerns separation, it's also very importanto to keep thing simple and testable. For example, a presentational component containing a connected container component becomes very hardly to test, infact a connected component will expect a mocked store in order to work.   
+
+#### 2.6.1 The counter app example
+
+Let's think about a typical example: a counter app. We can create three different components. Two presentational components, a button to increment/decrement and a label to show the actual count, and a container components, to store the count variable and increment or decrement it, when a button is pressed.
+
+```js
+const Button = ({text, onClick}) => <button onclick={onClick}>{text}</button>;
+```
+
+You could ask why we create a button which is just a bare proxy to an actual html tag. Well, first this is a patter, the proxy pattern. Second, it's the right way to proceed, infact you can style your button here and reuse it everywhere in your code base, whithout the need to rewrite/restyle/retest it. We must create a component, everytime we have the possibility to do it. Smae considerations are valid for the following simple component.
+
+```js
+const CountValue = ({value}) => <span>{value}</span>;
+```
+
+Finally we create our container, which will aggregate our presentational components and pass them the necessary callbacks and props.
+
+```js
+class Counter extends Component {
+    state = { count = 0 };
+
+    changeCount = changer => () => this.setState({ count: changer(this.state.count) });
+
+    onAddClick = changeCount(count => count + 1);
+
+    onRemoveClick = changeCount(count => Math.max(0, count - 1));
+
+    render() {
+        const { count } = this.state;
+        return (
+            <Fragment>
+                <Button text="+" onClick={this.onAddClick} />
+                <CountValue value={count} />
+                <Button text="-" onClick={this.onRemoveClick} />
+            </Fragment>
+        );
+    }
+}
+```
+
+So that, easy to see, either just looking at its line of codes. Containers are more complex. Presentationals are simplier. Obviously this is a very basic example, but your components shall never be so much different from these ones. Did you write a 30 lines presentational component? Please, refactor it. Something went wrong. You could split it up for sure!
+
+#### 2.6.2 FP: an arrogant introduction
+
+You just read a bunch of _functional programming_ (changeCount function and its occurences) in the container above. The easiest and simpliest use of functional programming, very basic. It could be a test for you: if you did not get it or found it hard to understand, you need to study the FP fundamentals. Why? Because it's cool. Because it's the past. Because it's the present. Because (maybe) it's the future. Because it's 2018. Because we _should be_ software developers.
+
+### 2.7 SFC or Class Component
 
 One of the most discussed arguments on the community is when to use a Class Component and when a Stateless Functional Component. The best answer, as often occurs, depends on the context and there's no one rule to follow. Let's try to underline some common considerations/questions/faqs about components.
 
@@ -174,7 +227,7 @@ Dan Abramov himself on the React.js official site invites everybody to use SFC. 
 
 * are (should be) pure function, and we love pure function
 * force you to write simple components. The simplier a thing is the better
-* have no lifecycle nor logic so they are perfect for presentational components, where we want to describe only the appearance of something and not its behaviour (presentationals how things look like, containers how things work, best description I've ever heard so far, can't remind the source)
+* have no lifecycle nor logic so they are perfect for presentational components, where we want to describe only the appearance of something and not its behaviour
 * are very easy to design, using for example styleguidist
 * are super simple to test, just with a shallow and a toMatchSnapshot
 * are _shorter_ than Class Components, so less boilerplate code
@@ -204,7 +257,7 @@ We can agree on, if we refer to the first time we see the new arrow function syt
 * Use Class Components when you need an internal state or a lifecycle method
 * Use Pure Class Components when you need to optimize performances
 
-### 2.7 Further readings
+### 2.8 Further readings
 
 * [React Components, Elements, and Instances - by Dan Abramov](https://reactjs.org/blog/2015/12/18/react-components-elements-and-instances.html)
 * [React Elements VS React Components - by Tyler McGinnis](https://medium.freecodecamp.org/react-elements-vs-react-components-fdc776705880)
@@ -212,9 +265,19 @@ We can agree on, if we refer to the first time we see the new arrow function syt
 
 ## 3. Patterns
 
+We may easily change name of this parageph to **Composition**. Why? Because the first thing we should start learning is how to compose software. We all learnt **OOP** and, as I recently discovered, we learnt in the worst way. All I knew was wrong, well, not the whole package, just the main principle: inheritance is bad, very bad, and multiple iheritance is evil, very evil.  
+We can't talk in deep about software composition in this document, it's a too vast argument. Just remember one single simple concept: **Composition over Inheritance**, EVER! Inheritance is the worst way to approach OOP. It's not necessary and has tons of disadvanges. You do something with inheritance, you can it better with function and object composition. This is the main point: we learnt inheritance in OOP when we should have learnt object composition in OOP.  
+Yes, ES6 introduces classed in javascript. Yes, you can inheritate in js. Yes again, you must not. Use functional programming and function composition to build your software. You should not necessary learn fucntional programming theory in dept (monoid, mondad, functor, endofunctor, category...). Neither you should write your code using Heskell. Just the base, it's simple, it's easy, it's cool.  
+So, in next paragraphs we will see how to create our software, composing React components and learning the best tecnique to pass information from children to parent and viceversa.
+
 ### 3.1 Children to parent
 
+Comunication from children to parent is very starightforward. We have two main solution: direct and indirect. Let's see what we're talking about, it's all simplier than it could seem.
+
 #### 3.1.1 Callback (direct)
+
+You will use this tecnique over and over while developing React components. Just a hint to remember: don't exceed with it. It's easy to abuse with this simple pattern, so think twice every time you're going to code a new feature.  
+Easy way to pass some kind of information from a child to a parent is using a callback, a function implemented by the parent, passed to the child and invoked by the child itself. Think about the simple case of a list
 
 #### 3.1.2 Common store (indirect)
 
