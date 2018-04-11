@@ -266,20 +266,51 @@ We can agree on, if we refer to the first time we see the new arrow function syt
 ## 3. Patterns
 
 We may easily change name of this parageph to **Composition**. Why? Because the first thing we should start learning is how to compose software. We all learnt **OOP** and, as I recently discovered, we learnt in the worst way. All I knew was wrong, well, not the whole package, just the main principle: inheritance is bad, very bad, and multiple iheritance is evil, very evil.  
-We can't talk in deep about software composition in this document, it's a too vast argument. Just remember one single simple concept: **Composition over Inheritance**, EVER! Inheritance is the worst way to approach OOP. It's not necessary and has tons of disadvanges. You do something with inheritance, you can it better with function and object composition. This is the main point: we learnt inheritance in OOP when we should have learnt object composition in OOP.  
+We can't talk in deep about software composition in this document, it's a too vast argument. Just remember one single simple concept: **Composition over Inheritance**, EVER! Inheritance is the worst way to approach OOP. It's not necessary and has tons of disadvanges. You do something with inheritance, you can do it better with functions and objects composition. This is the main point: we learnt inheritance in OOP when we should have learnt object composition in OOP.  
 Yes, ES6 introduces classed in javascript. Yes, you can inheritate in js. Yes again, you must not. Use functional programming and function composition to build your software. You should not necessary learn fucntional programming theory in dept (monoid, mondad, functor, endofunctor, category...). Neither you should write your code using Heskell. Just the base, it's simple, it's easy, it's cool.  
 So, in next paragraphs we will see how to create our software, composing React components and learning the best tecnique to pass information from children to parent and viceversa.
 
 ### 3.1 Children to parent
 
-Comunication from children to parent is very starightforward. We have two main solution: direct and indirect. Let's see what we're talking about, it's all simplier than it could seem.
+Comunication from children to parent is very straightforward. We have two main solutions: direct and indirect. Let's see what we're talking about, it's all simplier than it could seem.
 
 #### 3.1.1 Callback (direct)
 
 You will use this tecnique over and over while developing React components. Just a hint to remember: don't exceed with it. It's easy to abuse with this simple pattern, so think twice every time you're going to code a new feature.  
-Easy way to pass some kind of information from a child to a parent is using a callback, a function implemented by the parent, passed to the child and invoked by the child itself. Think about the simple case of a list
+Easy way to pass some kind of information from a child to a parent is using a callback, a function implemented by the parent, passed to the child and invoked by the child itself. Think about the simple case of a component containing a list of element and you want to communicate to the parent when an item is clicked, so the parent could store the selected item and do some other stuff (show it in a label, for example).
+
+```js
+import React, { Fragment, Component } from 'react';
+import { render } from 'react-dom';
+
+const NumberList = ({ numbers, onNumberClick }) => <Fragment>{numbers.map(n => <div onClick={() => onNumberClick(n)}>{n}</div>)}</Fragment>;
+
+const SelectedNumber = ({ number }) => <span>Selected: {number}</span>;
+
+class Counter extends Component {
+  state = { number: 0 };
+
+  onNumberClick = number => this.setState({ number });
+
+  render() {
+    const { number } = this.state;
+    return (
+      <Fragment>
+        <NumberList onNumberClick={this.onNumberClick} numbers={[42, 101, 202]} />
+        <SelectedNumber number={number} />
+      </Fragment>
+    );
+  }
+}
+```
+
+The **NumberList** component receives a list of numbers, renders them into separated divs and registers a different callback for each entry. The callback receive the clicked number itself, so that the container can pass it to another component, which renders the selected number into a span.  
+This is a typical example, a simple one, but quite interesting and generic of how child component can pass an informationa (the selected number) to its parent.
 
 #### 3.1.2 Common store (indirect)
+
+Another classical use case is storing data into a common store. When the store changes, React re-renders its tree.  
+The most common _store manager_ is Redux, but mobx is another valid alternative or, dunno why you should but you could, write your own one. Anyway, the concept is always the same. We're not goint to talk about Redux in this document, since it's not the right place. You just know Redux. If not, go and learn it!
 
 ### 3.2 Parent to children
 
