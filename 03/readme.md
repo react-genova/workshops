@@ -310,7 +310,8 @@ This is a typical example, a simple one, but quite interesting and generic of ho
 #### 3.1.2 Common store (indirect)
 
 Another classical use case is storing data into a common store. When the store changes, React re-renders its tree.  
-The most common _store manager_ is Redux, but mobx is another valid alternative or, dunno why you should but you could, write your own one. Anyway, the concept is always the same. We're not goint to talk about Redux in this document, since it's not the right place. You just know Redux. If not, go and learn it!
+The most common _store manager_ is Redux, but mobx is another valid alternative or, dunno why you should but you could, write your own one. Anyway, the concept is always the same. We're not goint to talk about Redux in this document, since it's not the right place. You just know Redux. If not, go and learn it!  
+This pattern could seem obvious and infact so it is, but it has an unestimable importance, since it's the only way to _pass_ information between not related components. I mean if you want to share information between components that do not have a parent/children relationship, you need to use a shared store. That's it.
 
 ### 3.2 Parent to children
 
