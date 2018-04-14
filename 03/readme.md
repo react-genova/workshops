@@ -315,12 +315,102 @@ This pattern could seem obvious and infact so it is, but it has an unestimable i
 
 ### 3.2 Parent to children
 
-#### 3.2.1 Higher Order Component pattern
+Techincally parents can pass informations to children only using 2 different tecniques:
 
-#### 3.2.2 Clonation pattern
+* **props**: we know them
+* **context**: a particular object filled by a provider component, passed by React down throught the components tree and read by consumer components
 
-#### 3.2.3 Provider/Consumers pattern
+In this chapter we're going to see a simple example: a cointainer reads mouse coordinates and pass them to its children. We want the container to be generic and with the ability to pass the coordinates to whichever components we need, so that we can reuse it along our code base.  
+So, first of all let's write a container which passes mouse **x** and **y** directly to its children, coupling tightly parent and children together. Then, into following paragraphs we will learn pattern to make our container generic.
 
-#### 3.2.4 Render prop pattern
+#### 3.2.1 Direct properties
 
-#### 3.2.4.1 Function as children pattern
+This is not either a pattern. It's the base of React components composition. Let's see the full example.
+
+```js
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+
+const Coordinate = ({ label, coord }) => (
+  <div>
+    <span style={{ color: '#CCCCCC'}}>{label}: </span>
+    <span style={{ color: 'white' }}><b>{coord}</b></span>
+  </div>
+);
+
+const Coordinates = ({ coords: { x, y } }) => (
+  <div style={{position: 'absoulte', padding: '5px' }}>
+    <Coordinate label="x" coord={x} />
+    <Coordinate label="y" coord={y} />
+  </div>
+);
+
+class MouseWrapper extends Component {
+  state = { coordinates: { x: 0, y: 0} };
+  onMouseMove = e => this.setState({ coordinates: { x: e.clientX, y: e.clientY }});
+  render() {
+    const { coordinates } = this.state;
+    return (
+      <div style={{ width: '100%', height: '100%'}} onMouseMove={this.onMouseMove}>
+        <Coordinates coords={coordinates} />
+      </div>
+    );
+  }
+}
+
+const App = () => (
+  <div style={{display: 'flex', width: '400px', height: '400px', backgroundColor: 'green'}}>
+    <MouseWrapper />
+  </div>
+);
+
+render(<App />, document.getElementById('root'));
+```
+
+First look at the **MouseWrapper** component. It's definetely not generic. It directly encapsulates the **Coordinates** component, so that it can only shows coordinates and nothing more. So our MouseWrapper should be called MouseCoordinates, rather than a generic wrapper. What if we'd want to add a circle under the mouse pointer?
+
+```js
+const Circle = ({ coords: { x, y }, radius: r = 10 }) => (
+  <div
+    style={{
+      position: "absolute",
+      backgroundColor: "yellow",
+      left: `${x - r}px`,
+      top: `${y - r}px`,
+      width: `${r / 2}px`,
+      height: `${r / 2}px`,
+      borderRadius: `${r}px`
+    }}
+  />
+);
+```
+
+If we'd want to wrap just the Circle component, without the Coordinates component we should create another wrapper, called for example **MousePointerWrapper**. And of we would like to use Circle togegher with Coordinates? **MousePointerAndCoordinatesWrapper**? I guess you got the point: it's not a scalable approach.
+
+```js
+class MousePointerAndCoordinatesWrapper extends Component {
+  state = { coordinates: { x: 0, y: 0} };
+  onMouseMove = e => this.setState({ coordinates: { x: e.clientX, y: e.clientY }});
+  render() {
+    const { coordinates } = this.state;
+    return (
+      <div style={{ width: '100%', height: '100%'}} onMouseMove={this.onMouseMove}>
+        <Coordinates coords={coordinates} />
+        <Circle coords={coordinates} />
+      </div>
+    );
+  }
+}
+```
+
+What we need is a generic MouseWrapper component to manage and hide mouse interaction and pass the coordinates somehow to generic children, so that we can use our wrapper all along our code base. In the following paragraphs we will learn the 4 main patterns to make our **MouseWrapper** really generic and reusable.
+
+#### 3.2.2 Provider/Consumers pattern
+
+#### 3.2.3 Clonation pattern
+
+#### 3.2.4 Higher Order Component pattern
+
+#### 3.2.5 Render prop pattern
+
+#### 3.2.5.1 Function as children pattern
