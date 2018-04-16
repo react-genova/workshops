@@ -405,11 +405,61 @@ class MousePointerAndCoordinatesWrapper extends Component {
 
 What we need is a generic MouseWrapper component to manage and hide mouse interaction and pass the coordinates somehow to generic children, so that we can use our wrapper all along our code base. In the following paragraphs we will learn the 4 main patterns to make our **MouseWrapper** really generic and reusable.
 
-#### 3.2.2 Provider/Consumers pattern
+#### 3.2.2 Clonation pattern
 
-#### 3.2.3 Clonation pattern
+First way we can choose to generalize our *Wrapper* component is to clone all children Components, adding the **coordinates** prop to each child. React exposes a specific API to iterate over children (React.Children) and another API to clone an element (React.cloneElement). 
 
-#### 3.2.4 Higher Order Component pattern
+```js
+import React, { Component } from "react";
+
+class MouseWrapper_CloneElement extends Component {
+  state = { coordinates: { x: 0, y: 0 } };
+  onMouseMove = e =>
+    this.setState({ coordinates: { x: e.clientX, y: e.clientY } });
+  render() {
+    const { coordinates } = this.state;
+    const { children } = this.props;
+    return (
+      <div
+        style={{ width: "100%", height: "100%" }}
+        onMouseMove={this.onMouseMove}
+      >
+        {React.Children.map(children, child =>
+          React.cloneElement(child, { coords: coordinates })
+        )}
+      </div>
+    );
+  }
+}
+
+export default MouseWrapper_CloneElement;
+```
+
+And its usage:
+
+```js
+<MouseWrapper_CloneElement>
+    <Coordinates />
+    <Circle />
+</MouseWrapper_CloneElement>
+```
+
+This is a very simple approach, but it's not a really good one. Infact it works only with direct children. Suppose to need a wrapping div to style Coordinates component or Circle component or Both.
+
+```js
+<MouseWrapper_CloneElement>
+    <div style={{fontFamily: 'Arial'}}>
+        <Coordinates />
+    </div>
+    <Circle />
+</MouseWrapper_CloneElement>
+```
+
+This little change will break our MouseWrapper_CloneElement, since it clones and add the coors prop to its children and, in the above example, Coordinates component is not a direct child anymore. The coords prop will be passed to the div element instead, that is not what we need. So, in conclusion, this is not such a brilliant solution.
+
+#### 3.2.3 Higher Order Component pattern
+
+#### 3.2.4 Provider/Consumers pattern
 
 #### 3.2.5 Render prop pattern
 
