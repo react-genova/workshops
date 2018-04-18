@@ -509,12 +509,103 @@ HOC pattern has another little tricky problem when applied in serie: prop naming
 
 #### 3.2.4 Provider/Consumers pattern (context)
 
+A couple of paragraphs ago we introduced the context concept. We defined it as _a particular object filled by a provider component, passed by React down throught the components tree and read by consumer components_. Before React 16.3.X using context was a little more complicated. Nothing special, actually, just a couple of methods for the parent and a couple of methods for the client. But since React 16.3.X things are much more interesting and easy to implement. Previous versions of React yet supported the context pattern, but we're going to see how to use context mechanism in React 16.3.0+.  
+First we need to create a React context, using the specific API:
+
+```js
+import React from 'react';
+const CoordinatesContext = React.createContext({ coordinates: { x: 0, y: 0 } });
+```
+
+The **createContext** API accepts a default context parametes, to initialize the context itself. Our context value is an object containing _x_ and _y_ fields. The API returns a context, which contains a Consumer and a Provider components. The Provider component propagates the content of its **value** prop down to all its children tree. And our precious Wrapper component becomes:
+
+```js
+class MouseWrapper_Context extends Component {
+  state = { coordinates: { x: 0, y: 0 } };
+  onMouseMove = e => this.setState({ coordinates: { x: e.clientX, y: e.clientY } });
+  render() {
+    return (
+      <div style={{ width: "100%", height: "100%" }} onMouseMove={this.onMouseMove}>
+        <CoordinatesContext.Provider value={this.state.coordinates}>
+          {this.props.children}
+        </CoordinatesContext.Provider>
+      </div>
+    );
+  }
+}
+```
+
+Finally we need a consumer for our context value (remind that the consumer has to be a descendant of the provider):
+
+```js
+<MouseWrapper_Context>
+  <CoordinatesContext.Consumer>
+  { coordinates => <Both coords={coordinates} />}
+  </CoordinatesContext.Consumer>
+</MouseWrapper_Context>
+```
+
+Have a look at the implementation. We have a **function**, not components, passed as children to **CoordinatesContext.Consumer**. This is because the new Context API uses internally the **Render prop pattern**, our next and last pattern to learn.
+
 #### 3.2.5 Render prop pattern
 
+We all know component props and used it to pass objects or values or even functions, such as a click callback. So we talk of _render prop pattern_ when a component receives a prop in its function and calls that function to render a particular react child component. The parent component can call the render function with all the parameters it needs. A component can expose more than one single render prop. But if you have only one render prop, by convention and out of imagination, the best practice is to call the prop **render**. Our Wrapper shall invoke a the prop _render_, passing its internal coordinates as argument:
+
+```js
+class MouseWrapper_RenderProp extends Component {
+  state = { coordinates: { x: 0, y: 0 } };
+  onMouseMove = e => this.setState({ coordinates: { x: e.clientX, y: e.clientY } });
+  render() {
+    return (
+      <div style={{ width: "100%", height: "100%" }} onMouseMove={this.onMouseMove}>
+        {this.props.render(this.state.coordinates)}
+      </div>
+    );
+  }
+}
+```
+
+All we need to do is passing a function in the render prop which renders our Both component using the coordinates value received into the function itself:
+
+```js
+<MouseWrapper_RenderProp render={coordinates => <Both coords={coordinates} />} />
+```
+
 #### 3.2.5.1 Function as children pattern
+
+A little variant on the render pattern applies the pattern to a particular prop: **children**. The prop children is a prop like every other prop, so we can pass a function as children and the result is:
+
+```js
+class MouseWrapper_RenderProp extends Component {
+  state = { coordinates: { x: 0, y: 0 } };
+  onMouseMove = e => this.setState({ coordinates: { x: e.clientX, y: e.clientY } });
+  render() {
+    return (
+      <div style={{ width: "100%", height: "100%" }} onMouseMove={this.onMouseMove}>
+        {this.props.children(this.state.coordinates)}
+      </div>
+    );
+  }
+}
+
+<MouseWrapper_RenderProp>
+{coordinates => <Both coords={coordinates} />}
+<MouseWrapper_RenderProp>
+```
+
+This is a particular case of the render prop pattern and, actually, at the moment is the preferred one. React community fell in love with the function as children pattern, for this reason I keep it as the last pattern of this document. To be sure you will remmeber the **Function as children pattern**.
 
 ### 3.3 Further readings
 
 * [Advanced React.jd Lectures - by Ryan Florence](https://medium.com/@ryanflorence/free-advanced-react-js-lectures-a9fdcad008f3)
 * [Learn React Fundamentals and Advanced Patterns - by Kent C. Dodds](https://blog.kentcdodds.com/learn-react-fundamentals-and-advanced-patterns-eac90341c9db)
 * [Composition vs Inheritance - by The React Team](https://reactjs.org/docs/composition-vs-inheritance.html)
+
+## 4. Exercises
+
+If you'd like to test what you just learned, open [code sandbox](https://codesandbox.io/), chose React and try write your own application, using one or more patterns. Here's a couple of proposal for you.
+
+### 4.1 Key logger
+
+Create a generic component which reads each pressed keys from the keyboard and propagates the last pressed key to its child.  
+You could also create a child component to show last pressed key and another child component which shows a **is a number** label if the key pressed is between "0" and "9". Just a hint: if you want to intercept the keyPress event on a div, rember to set the _tabIndex_ attribute...
