@@ -19,14 +19,19 @@ class KeyLogger extends Component {
 }
 
 const KeyMapper = ({ k }) => (
-  <div>
-    <span style={{ color: "white" }}>Key: {k}</span>
-    <span style={{ color: "white" }}>
-      {" "}
-      {k >= "0" && k <= "9" ? "is a number" : null}
+  <div style={{ color: "white" }}>
+    <span>Key </span>
+    <span style={{ fontWeight:'bold', color: "lightgreen" }}>{k}</span>
+    <span>
+      {k >= "0" && k <= "9" ? " is a number" : null}
     </span>
   </div>
 );
 
-export { KeyMapper };
-export default KeyLogger;
+const Main = () => (
+    <KeyLogger>
+    {key => <KeyMapper k={key} />}
+    </KeyLogger>    
+);
+
+export default Main;
