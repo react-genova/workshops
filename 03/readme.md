@@ -593,7 +593,12 @@ class MouseWrapper_RenderProp extends Component {
 <MouseWrapper_RenderProp>
 ```
 
-This is a particular case of the render prop pattern and, actually, at the moment is the preferred one. React community fell in love with the function as children pattern, for this reason I keep it as the last pattern of this document. To be sure you will remmeber the **Function as children pattern**.
+This is a particular case of the render prop pattern and, actually, at the moment React community fell in love with the function as children pattern, mostly for these two reasons:
+
+* there's no hidden magic behind the curtain, you can see render prop signature directly right into the render method of your components you're creating. This is a great feature, because just reading your render method you achieve all features your component expose. HOC is somehow more difficult to discover and you can miss a hoc wrapper applied direct on the default export exit point.
+* the render method of a render prop pass you genric parameters, it does not add or change any props of the consumer components. This is amazing. You can use and transform the parameters as you prefer, not as the wrapper wants.
+
+For this reasons I keep this pattern as the last one of this document. To be sure you will remmeber the **Function as children pattern**.
 
 ### 3.3 Further readings
 
@@ -607,5 +612,16 @@ If you'd like to test what you just learned, open [code sandbox](https://codesan
 
 ### 4.1 Key logger
 
-Create a generic component which reads each pressed keys from the keyboard and propagates the last pressed key to its child.  
-You could also create a child component to show last pressed key and another child component which shows a **is a number** label if the key pressed is between "0" and "9". Just a hint: if you want to intercept the keyPress event on a div, rember to set the _tabIndex_ attribute...
+Create a generic component which reads each pressed keys from the keyboard and propagates the last pressed key to its child. You could try to use several pattern for this component (provider/consumer, hoc and render prop) just as you read into this documentation.  
+You could also create a child component to show last pressed key and another child component which shows a **is a number** label if the key pressed is between "0" and "9". Just a hint: if you want to intercept the keyPress event on a div, rember to set the _tabIndex_ attribute.
+
+### 4.2 Application Skeleton
+
+A little more interesting example could be a real case application skeleton. Think about a suite of multiple products. Each product should share the same styles (colours, paddings, margins, fonts...) and should also show up with the same structure (header, footer, side menu, body, for example) to make our users life simplier and, by our side, not reinventing the wheel each time we start a new project.  
+
+So, our wish list may be:
+
+* a theme manager, to share some styles with all children components
+* an application skeleton layout, to cross-share a skeleton between all applications
+
+How would you structure this module?
