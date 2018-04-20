@@ -35,7 +35,7 @@ A React Element has some more properties, internally managed by React itself, bu
 ### 2.2 React Component
 
 The **type** field of the React Element in the previous example is a string, which identify a HTML tag. But it could be also a function or a class. In this case, React knows that the element is representing a React Component and not directly a DOM node. So React asks the Component how it renders and the component returns a React Element describing itself.  
-We can make a little change to the past example, still using only elements and DON nodes.
+We can make a little change to the past example, still using only elements and DOM nodes.
 
 ```html
 <div>
@@ -137,7 +137,7 @@ A Class Component has something more than a Stateless Functional Component:
 
 * a lifecycle and lots of callbacks to manage it (componentWillMount, componentDidMount, ... lots of these methods are deprecated, since v16.3.0 of React. In React v17.x.x they will disappear. Pay attention)
 * an internal state used to store data
-* an instance: React will manage istances for us and we shall not care about their existance, but it could interesting to know that React creates an instance for each occurrence of the component into our app, to invoke callback and call imperative method on it (a set focus, for example)
+* an instance: React will manage istances for us and we shall not care about their existance, but it could be interesting to know that React creates an instance for each occurrence of the component into our app, to invoke callback and call imperative method on it (a set focus, for example)
 
 ### 2.5 Components composition
 
