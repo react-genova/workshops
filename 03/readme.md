@@ -148,15 +148,15 @@ import React, { Component } from 'react';
 
 const MyText = ({children}) => <span className="redTextClass">{children}</span>;
 
-const MyLayout = ({textAlign, backcgroundColor}) => (
-    <div style={{textAlign, backcroundColor, width:'100%'}}>
+const MyLayout = ({textAlign, backgroundColor}) => (
+    <div style={{textAlign, backgroundColor, width:'100%'}}>
         <MyText>Hallo World!</MyText>
     </div>
 );
 
 class MyApp extends Component {
     render() {
-        return <MyLayout textAlign="center" backcgroundColor="black" />;
+        return <MyLayout textAlign="center" backgroundColor="black" />;
     }
 }
 
@@ -596,7 +596,7 @@ class MouseWrapper_RenderProp extends Component {
 This is a particular case of the render prop pattern and, actually, at the moment React community fell in love with the function as children pattern, mostly for these two reasons:
 
 * there's no hidden magic behind the curtain, you can see render prop signature directly right into the render method of your components you're creating. This is a great feature, because just reading your render method you achieve all features your component expose. HOC is somehow more difficult to discover and you can miss a hoc wrapper applied direct on the default export exit point.
-* the render method of a render prop pass you genric parameters, it does not add or change any props of the consumer components. This is amazing. You can use and transform the parameters as you prefer, not as the wrapper wants.
+* the render method of a render prop pass you generic parameters, it does not add or change any props of the consumer components. This is amazing. You can use and transform the parameters as you prefer, not as the wrapper wants.
 
 For this reasons I keep this pattern as the last one of this document. To be sure you will remmeber the **Function as children pattern**.
 
