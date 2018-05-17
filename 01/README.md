@@ -61,11 +61,14 @@ The react-starter-kit inside src folder is a the React Application coataining al
 ## Conclusions - Yeah, interesting, so in short?
 
 ### Just the first time
+
  * Download and install Node.js
  * Download and install Visual Studio Code and its plugins
  * ```> npm install -g create-react-app```
  * ```> npm install -g flow-bin flow-typed```
+
 ### Each time you create an app
+
  * ```> create-react-app your-app-pretty-cool-name```
  * ```> cd your-app-pretty-cool-name```
  * ```> npm install --save styled-components recompose react-redux flow-bin redux redux-immutable redux-logger reselect axios axios-mock-adapter immutable lodash enzyme jest-immutable-matchers enzyme-adapter-react-16 enzyme-to-json react-styleguidist react-test-renderer redux-test-utils```
@@ -76,3 +79,27 @@ The react-starter-kit inside src folder is a the React Application coataining al
  * [Add test config file 'setupTests.js'](https://github.com/react-genova/workshops/blob/master/01/resources/setupTests.js)
  * ```> flow-typed install enzyme@3.0.0 jest@20.0.0 lodash@4.0.0 recompose@0.24.0 styled-components@2.2.3 reselect@3.0.1 axios@0.17.1```
  * ```> npm start```
+
+### Visual Studio Code configuration hints
+
+#### Aliases in webpack
+
+If using aliases in webpack, code navigation could break in Visual Studio Code: ctrl+click or navigate to definition or any other command could no longer work. 
+To fix it, add following option to your **jsconfig.json** file in your root directory:
+
+```
+"compilerOptions": {
+    "moduleResolution": "node",
+},
+```
+
+#### JSX file navigation
+
+If using **jsx** for your React Component file extension, code naviation could breack again. 
+To fix it, add following option to your **jsconfig.json** file in your root directory:
+
+```
+"compilerOptions": {
+    "jsx": "react",
+},
+```
