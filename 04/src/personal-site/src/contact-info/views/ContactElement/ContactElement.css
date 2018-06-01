@@ -1,0 +1,17 @@
+.contact-element {
+    font-size: 20px;
+    color: gray;
+    display: flex;
+}
+
+.contact-element-label {
+    font-weight: lighter;
+    padding-right: 5px;
+    flex: 0 0 170px;
+    text-align: right;
+}
+
+.contact-element-value {
+    font-weight: bold;
+    text-align: left;
+}

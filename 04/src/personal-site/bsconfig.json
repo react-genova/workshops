@@ -1,6 +1,15 @@
 {
   "name": "reason-scripts",
-  "sources": ["src", "src/contact-info/views"],
+  "sources": [
+    "src",
+    "src/contact-info/views/ContactElement",
+    "src/contact-info/views/ContactFullname",
+    "src/contact-info/views/ContactEmail",
+    "src/contact-info/views/ContactInfo",
+    "src/pages/views/Page",
+    "src/pages/views/PageWelcome",
+    "src/pages/views/PageTechSkills"
+  ],
   "bs-dependencies": ["reason-react", "@glennsl/bs-jest"],
   "reason": {
     "react-jsx": 2
