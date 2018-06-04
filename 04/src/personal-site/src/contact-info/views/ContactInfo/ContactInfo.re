@@ -6,7 +6,7 @@ let make = (_children) => {
     ...component,
     render: (_self) =>
         <div className="contact-info">
-            <ContactFullname name="Andrea" surname="Briozzo" />
-            <ContactEmail email="andrea.briozzo@gmail.com" />
+            <ContactFullname className="contact-info-first" name="Andrea" surname="Briozzo" />
+            <ContactEmail className="contact-info-second" email="andrea.briozzo@gmail.com" />
         </div>
 };

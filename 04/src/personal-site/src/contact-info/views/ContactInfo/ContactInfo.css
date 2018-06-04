@@ -1,5 +1,24 @@
 .contact-info {
-    display: flex;
     flex-direction: column;
     background-color: rgba(0,0,0,0.4);
+}
+
+.contact-info:hover .contact-info-first {
+    height: 0px;
+}
+
+.contact-info:hover .contact-info-second {
+    height: 30px;
+}
+
+.contact-info-first {
+    height: 30px;
+    overflow: hidden;
+    transition: height 0.5s 0s;
+}
+
+.contact-info-second {
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.5s 0s;
 }
