@@ -4,10 +4,26 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
 
     background-image: url("../../resources/bk_welcome.jpg");
+}
+
+.page-header {
+    display: flex;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.page-header-text {
+    flex: 1;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.page-body {
+    flex: 1;
+    display: flex;
 }

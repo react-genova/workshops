@@ -3,8 +3,6 @@
   "sources": [
     "src",
     "src/contact-info/views/ContactElement",
-    "src/contact-info/views/ContactFullname",
-    "src/contact-info/views/ContactEmail",
     "src/contact-info/views/ContactInfo",
     "src/pages/views/Page",
     "src/pages/views/PageWelcome",

@@ -7,14 +7,6 @@
     padding: 0px 20px;
 }
 
-.contact-element-label {
-    font-weight: lighter;
-    padding-right: 5px;
-    flex: 0 0 170px;
-    text-align: right;
-    display: none;
-}
-
 .contact-element-value {
     font-weight: bold;
 }

@@ -2,10 +2,16 @@
 
 let component = ReasonReact.statelessComponent("Page");
 
-let make = (~className: string, children: ReasonReact.reactElement) => {
+let make = (~header: string, ~className: string, children: ReasonReact.reactElement) => {
     ...component,
     render: (_self) => 
         <div className={"page-main " ++ className}>
-        {children}
+            <div className="page-header">
+                <div className="page-header-text">{ReasonReact.string(header)}</div>
+                <div className="page-header-contact"><ContactInfo /></div>
+            </div>
+            <div className="page-body">
+            {children}
+            </div>
         </div>
 };

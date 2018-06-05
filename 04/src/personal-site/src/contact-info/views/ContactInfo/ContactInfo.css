@@ -1,6 +1,5 @@
 .contact-info {
     flex-direction: column;
-    background-color: rgba(0,0,0,0.4);
 }
 
 .contact-info:hover .contact-info-first {

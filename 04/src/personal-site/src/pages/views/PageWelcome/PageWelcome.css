@@ -1,3 +1,36 @@
 .page-welcome {
     background-image: url("../../resources/bk_welcome.jpg");
+    flex: 1;
+    display: flex;
+}
+
+.page-welcome-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 0px 40px;
+    align-items: flex-start;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.page-welcome-name {
+    font-size: 40px;
+}
+
+.page-welcome-details {
+    padding-top: 20px;
+    font-size: 30px;
+    padding-left: 20px;
+    font-weight: bold;
+    opacity: 0.7;
+    transition-property: all;
+    transition-duration: 300ms;
+}
+
+.page-welcome-details:hover {
+    font-weight: bolder;
+    opacity: 1;
+    padding-left: 30px;
 }
