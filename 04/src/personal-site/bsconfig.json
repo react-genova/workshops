@@ -6,7 +6,8 @@
     "src/contact-info/views/ContactInfo",
     "src/pages/views/Page",
     "src/pages/views/PageWelcome",
-    "src/pages/views/PageTechSkills"
+    "src/pages/views/PageTechSkills",
+    "src/pages/views/PageSoftSkills"
   ],
   "bs-dependencies": ["reason-react", "@glennsl/bs-jest"],
   "reason": {

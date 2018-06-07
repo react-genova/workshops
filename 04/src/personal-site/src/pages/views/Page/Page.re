@@ -2,7 +2,7 @@
 
 let component = ReasonReact.statelessComponent("Page");
 
-let make = (~header: string, ~className: string, children: ReasonReact.reactElement) => {
+let make = (~header: string, ~className: string, [| theonlychild |]) => {
     ...component,
     render: (_self) => 
         <div className={"page-main " ++ className}>
@@ -11,7 +11,7 @@ let make = (~header: string, ~className: string, children: ReasonReact.reactElem
                 <div className="page-header-contact"><ContactInfo /></div>
             </div>
             <div className="page-body">
-            {children}
+            {theonlychild}
             </div>
         </div>
 };

@@ -8,5 +8,6 @@ let make = (_children) => {
       <div className="app">
         <PageWelcome />
         <PageTechSkills />
+        <PageSoftSkills />
       </div>
 };

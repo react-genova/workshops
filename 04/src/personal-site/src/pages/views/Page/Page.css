@@ -12,15 +12,16 @@
 
 .page-header {
     display: flex;
+    align-items: center;
     padding: 20px;
     background-color: rgba(0,0,0,0.4);
 }
 
 .page-header-text {
     flex: 1;
-    font-size: 30px;
+    font-size: 60px;
     font-weight: bold;
-    color: white;
+    color: deepskyblue;
 }
 
 .page-body {

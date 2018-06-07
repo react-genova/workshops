@@ -1,0 +1,11 @@
+.page-soft-skills {
+    background-image: url("../../resources/bk_soft_skills.jpg");
+}
+
+.page-soft-skills-element {
+    border-radius: 150%;
+}
+
+.page-soft-skills-element:hover {
+    border-radius: 0;
+}

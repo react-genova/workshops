@@ -1,3 +1,27 @@
 .page-tech-skills {
     background-image: url("../../resources/bk_tech_skills.jpg");
 }
+
+.page-tech-skills-body {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.page-tech-skills-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.3);    
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-delay: 0ms;
+}
+
+.page-tech-skills-element:hover {
+    font-size: 60px;
+    text-shadow: 0px 0px 30px cyan;
+}
